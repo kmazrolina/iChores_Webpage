@@ -3,7 +3,6 @@ import './App.css';
 
 function App() {
 	return (
-		
 		<div>
 			<nav class="navbar background">
 				<ul class="nav-list">
