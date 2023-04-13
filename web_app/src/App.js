@@ -56,7 +56,7 @@ function App() {
 			</section>
 			
 			<div class = "circle">
-				<Circle  r={200} fill={{color:'#2409ba'}} stroke={{color:'#E65243'}} strokeWidth={3} />
+				<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
 			</div>
 
 			<section class="section">
