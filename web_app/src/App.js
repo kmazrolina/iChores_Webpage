@@ -13,10 +13,7 @@ function App() {
 			
 			<nav class="navbar background">
 				<ul class="nav-list">
-					<div class="logo">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" />
-					</div>
+					
 					<li><a href="About">About</a></li>
 					<li><a href="Architecture">Architecture</a></li>
 					<li><a href='Collaborators'>Collaborators</a></li>
@@ -67,6 +64,12 @@ function App() {
 
 			
 			
+<<<<<<< HEAD
+=======
+			<div class = "circle">
+				<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
+			</div>
+>>>>>>> dd066fa2248baffa990a6b360ccdc6df4d5bcf53
 
 			<section class="section">
 				<div class="box-main">

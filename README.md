@@ -17,8 +17,17 @@ You may also see any lint errors in the console.
 ## Przesyłanie i pobieranie zmian
 Przed rozpoczęciem pracy:
 ### `git fetch`
+lub 
+### `git pull`
 Po zakończeniu pracy:
 ### `git push`
+
+Jeśli coś nie działa z gitem:
+### `cd ..` - przejście do folderu iChores_Webpage
+### `git add .`
+
+
+
 
 
 ### Dodatkowe komendy
