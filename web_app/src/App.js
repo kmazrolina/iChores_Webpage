@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import {Rectangle, Circle, Ellipse, Line, Polyline, CornerBox, Triangle} from 'react-shapes';
 
+import img1 from './ichores1.png'
+import img2 from './ichores2.png'
+
 
 
 function App() {
@@ -40,24 +43,30 @@ function App() {
 					</div>
 				</div>
 			</section>
+
+			
 			
 			<section class="section">
-				<div class="box-main">
+				<div class="section-left">
 					<div class="secondHalf">
 						<h1 class="text-big" id="program">
-							Architecture
+							User case               
 						</h1>
-						<img src="iChores_1">
 
+						<img src = {img1} alt="User case" height = "200" width = "300">
+							
+						</img>
+
+						<img src = {img2} alt="Architecture" height = "200" width = "300">
+							
 						</img>
 					
 					</div>
 				</div>
 			</section>
+
 			
-			<div class = "circle">
-				<Circle  r={200} fill={{color:'#2409ba'}} stroke={{color:'#E65243'}} strokeWidth={3} />
-			</div>
+			
 
 			<section class="section">
 				<div class="box-main">

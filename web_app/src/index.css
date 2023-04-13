@@ -77,6 +77,18 @@
 	height: 80%;
 }
 
+.box-left {
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	display: inline; 
+	position: left;
+	color: black;
+	max-width: 80%;
+	margin: auto;
+	height: 80%;
+}
+
 .firsthalf {
 	width: 100%;
 	display: flex;
