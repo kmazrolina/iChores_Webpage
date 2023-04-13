@@ -21,7 +21,7 @@ function App() {
 
 				
 			</nav>
-			<section class="landing">
+			<section class="section">
 				<div >
 						<h1 class="title">
 							iChores
