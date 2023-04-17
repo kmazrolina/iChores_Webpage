@@ -10,6 +10,10 @@ import {delay, motion} from  "framer-motion";
 import {useRef} from "react";
 
 
+import img1 from './ichores1.png'
+import img2 from './ichores2.png'
+
+//flex-direction: row-reverse;
 
 
 function App() {
@@ -35,7 +39,7 @@ function App() {
 	"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" />
 						</div>
 						<li onClick={() => scrollToSection(about)}>About</li>
-						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
+						<li onClick={() => scrollToSection(architecture)}> Architecture and User Case</li>
 						<li onClick={() => scrollToSection(collaborators)}> Collaborators </li>
 					</ul>
 
@@ -69,9 +73,34 @@ function App() {
 				<section ref = {architecture}  class="section">
 					<div class="box-main">
 						<div class="secondHalf">
-							<h1 class="text-big" id="program">
-								Architecture
-							</h1>
+							<h1 class="text_center"  id="program">
+							User case               
+						</h1>
+
+						
+
+						<img  src = {img1} alt="User case" height = "270" width = "400" id="image">
+							
+						</img>
+
+						
+
+					</div>
+
+					<span></span>
+
+					<div class="secondHalf" id="architecture">	
+
+						
+						<h1 class="text_center"  id="program">
+							Architecture               
+						</h1>
+						
+						
+
+						<img src = {img2} alt="Architecture" height = "270" width = "400" id="image">
+							
+						</img>
 
 						</div>
 					</div>
