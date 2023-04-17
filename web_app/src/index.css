@@ -214,14 +214,27 @@ background-color: #000;
 
 
 .button {
-	background-color: #ffffff; 
+	background-color: none; 
 	border: none;
-	color: white;
+	color: rgb(0, 0, 0);
 	padding: 1cm;
+	padding-bottom: 1cm;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 24px;
+  }
+
+  .button2 {
+	background-color: none; 
+	border: none;
+	color: rgb(0, 0, 0);
+	padding: 1cm;
+	padding-bottom: 2.5cm;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
   }
 
 

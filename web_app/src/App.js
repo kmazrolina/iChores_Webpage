@@ -6,6 +6,7 @@ import img1 from './ichores1.png'
 import img2 from './ichores2.png'
 import img3 from './github.png'
 import img4 from './youtube.png'
+import img5 from './SRL_logo.svg'
 
 //flex-direction: row-reverse;
 
@@ -132,18 +133,21 @@ function App() {
 						
 						
 						
-						<a href="https://github.com/kmazrolina/iChores_Webpage" >
-							<button class = "button"><img src = {img3} alt="Github" height = "50" width = "50" id="image"></img></button></a> 
+						<a href="https://en.wikipedia.org/wiki/Prague" class = "button2">
+							<p>PRAGUE</p>LAB</a> 
 						
 							
 						
 						
 						
 						
-						<a href="https://www.youtube.com/">
-							<button class = "button"><img src = {img4} alt="YouTube" height = "50" width = "60" id="image"></img></button></a>
+						<a href="https://en.wikipedia.org/wiki/Bratislava" class = "button2">
+							<p>BRATISLAVA</p> LAB</a>
 					
-							
+						
+						<a href="https://en.uj.edu.pl/" class = "button">
+							<img src = {img5} alt="YouTube" height = "100" width = "130" id="image"></img></a>
+						
 					</div>
 				</div>
 			</section>
