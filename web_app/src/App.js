@@ -5,6 +5,7 @@ import {Rectangle, Circle, Ellipse, Line, Polyline, CornerBox, Triangle} from 'r
 import img1 from './ichores1.png'
 import img2 from './ichores2.png'
 
+//flex-direction: row-reverse;
 
 
 function App() {
@@ -41,35 +42,83 @@ function App() {
 				</div>
 			</section>
 
+
 			
-			
-			<section class="section">
+		{/*	<section class="section">
 				<div class="section-left">
-					<div class="secondHalf">
-						<h1 class="text-big" id="program">
+					<div class="secondHalf flex" >
+
+						<h1 class="text-big padding_usercase"  id="program">
 							User case               
 						</h1>
 
-						<img src = {img1} alt="User case" height = "200" width = "300">
-							
-						</img>
+						<span></span>
 
-						<img src = {img2} alt="Architecture" height = "200" width = "300">
-							
-						</img>
-					
+						<h1 class="text-big padding_architecture"  id="program">
+							Architecture               
+						</h1>
+
 					</div>
-				</div>
-			</section>
 
+					
+
+					<div class="secondHalf flex" id="architecture">	
+
+						
+						<img class="padding_image1" src = {img1} alt="User case" height = "270" width = "400" id="image">
+							
+						</img>
+						
+						<span></span>
+
+						<img class="padding_image2" src = {img2} alt="Architecture" height = "270" width = "400" id="image">
+							
+						</img>
+					</div>	
+					
+				</div>
+	</section> */}
+
+
+
+<section class="section">
+				<div class="section-left flex">
+					<div class="secondHalf" >
+
+						<h1 class="text_center"  id="program">
+							User case               
+						</h1>
+
+						
+
+						<img  src = {img1} alt="User case" height = "270" width = "400" id="image">
+							
+						</img>
+
+						
+
+					</div>
+
+					<span></span>
+
+					<div class="secondHalf" id="architecture">	
+
+						
+						<h1 class="text_center"  id="program">
+							Architecture               
+						</h1>
+						
+						
+
+						<img src = {img2} alt="Architecture" height = "270" width = "400" id="image">
+							
+						</img>
+					</div>	
+					
+				</div>
+				</section>		
 			
-			
-<<<<<<< HEAD
-=======
-			<div class = "circle">
-				<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
-			</div>
->>>>>>> dd066fa2248baffa990a6b360ccdc6df4d5bcf53
+
 
 			<section class="section">
 				<div class="box-main">
