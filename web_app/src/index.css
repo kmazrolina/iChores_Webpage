@@ -106,6 +106,7 @@
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 30px;
 	padding-bottom: 30px;
+	text-align: center;
 }
 
 .text_center{
@@ -210,5 +211,17 @@ background-color: #000;
 .flex { 
 	display : flex; 
 }
+
+
+.button {
+	background-color: #ffffff; 
+	border: none;
+	color: white;
+	padding: 1cm;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+  }
 
 

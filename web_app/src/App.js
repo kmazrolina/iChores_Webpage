@@ -4,6 +4,8 @@ import {Rectangle, Circle, Ellipse, Line, Polyline, CornerBox, Triangle} from 'r
 
 import img1 from './ichores1.png'
 import img2 from './ichores2.png'
+import img3 from './github.png'
+import img4 from './youtube.png'
 
 //flex-direction: row-reverse;
 
@@ -126,10 +128,22 @@ function App() {
 						<h1 class="text-big" id="program">
 							Collaborators
 						</h1>
-						<p class="text-small">
 						
-							linki
-						</p>
+						
+						
+						
+						<a href="https://github.com/kmazrolina/iChores_Webpage" >
+							<button class = "button"><img src = {img3} alt="Github" height = "50" width = "50" id="image"></img></button></a> 
+						
+							
+						
+						
+						
+						
+						<a href="https://www.youtube.com/">
+							<button class = "button"><img src = {img4} alt="YouTube" height = "50" width = "60" id="image"></img></button></a>
+					
+							
 					</div>
 				</div>
 			</section>
