@@ -59,26 +59,23 @@ function App() {
 				<section ref = {about} class="section">
 			
 					<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
-							<div class="firstHalf">
 								<h1 class="text-big">
 									About
 								</h1>
 								<p class="text-small">
 								Social service robots are becoming more common, but they need to be designed for people with no experience with robots. Current robots are not easy for non-expert users to use. Our project aims to develop a collaborative interface for domestic service robots that uses language, gestures, and gaze to interact with users. We will conduct user studies to understand how humans naturally collaborate with robots using gestures and gaze. We will test our approach in scenarios involving arranging items on a table and tidying up a room, both in virtual and real-world environments.
 								</p>
-							</div>
 				
 					</motion.div>
 				</section>
 				
 				<section ref = {user_case}  class="section">
 					<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
-						<div class="secondHalf">
 							<h1 class="text_center"  id="program">
 								User case               
 							</h1>
-							<img  src = {img1} alt="User case" height = "270" width = "400" id="image"></img>
-						</div>
+							<p class="text-small">VISUALS WILL BE INSERTED HERE</p>
+							
 					</motion.div>
 				</section>
 
@@ -89,8 +86,8 @@ function App() {
 							<h1 class="text_center"  id="program">
 								Architecture               
 							</h1>
+							<p class="text-small">VISUALS WILL BE INSERTED HERE</p>
 
-							<img src = {img2} alt="Architecture" height = "270" width = "400" id="image"></img>
 
 						</div>
 					</motion.div>
@@ -126,50 +123,34 @@ function App() {
 						<img src={dots_blue} alt="k" height={"70%"} width={"70%"}></img>
 					</motion.div>
 
-				<section ref = {collaborators}  class="section">
-					<div class="box-main">
-						<div class="secondHalf">
-							<h1 class="text-big" id="program">
-								Collaborators
-							</h1>
-							<p class="text-small">
-							
-								linki
-							</p>
-						</div>
-				</div>
-				</section>		
-			
+					
 
-
-			<section class="section">
-				<div class="box-main">
-					<div class="secondHalf">
+			<section ref = {collaborators}  class="section">
+				<div >
+					
 						<h1 class="text-big" id="program">
 							Collaborators
 						</h1>
-						<div align-items="center">
-							<button class="button">
+						<div class= "buttons">
+						
+							<div class="button">
+								<a   href="https://en.wikipedia.org/wiki/Prague">PRAGUE LAB</a> 
+							</div>
+							<div class="button">
+								<a  href="https://en.wikipedia.org/wiki/Bratislava">BRATISLAVA LAB</a>
+							</div>
 							
-								<a href="https://en.wikipedia.org/wiki/Prague" class = "button">PRAGUE LAB</a> 
-							</button>
-							<button class="button">
-								<a href="https://en.wikipedia.org/wiki/Bratislava" class = "button">BRATISLAVA LAB</a>
-							</button>
-							
-							<button class="button">
-								<img   href="https://en.uj.edu.pl/" src = {SRL_logo} alt="YouTube" height = "100" width = "130" id="image"></img>
-							</button>
+							<div class="button">
+								<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} alt="YouTube" height = "100" width = "130" id="image"></img></a>
+							</div>
 						</div>
 						
-						
-					</div>
 					</div>
 				</section>
 				
 				<footer className="footer" >
-					<p className="text-footer">
-						jakis footer, moze logo uj czy cos
+					<p className="text-footer" >
+						FOOTER: grant information will be included here
 					</p>
 				</footer>
 
