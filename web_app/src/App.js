@@ -13,11 +13,7 @@ import {useRef} from "react";
 
 import img1 from './Pictures/ichores1.png';
 import img2 from './Pictures/ichores2.png';
-
-
-import img3 from './github.png'
-import img4 from './youtube.png'
-import img5 from './SRL_logo.svg'
+import SRL_logo from './Pictures/SRL_logo.svg'
 
 //flex-direction: row-reverse;
 
@@ -162,7 +158,7 @@ function App() {
 							</button>
 							
 							<button class="button">
-								<img   href="https://en.uj.edu.pl/" src = {img5} alt="YouTube" height = "100" width = "130" id="image"></img>
+								<img   href="https://en.uj.edu.pl/" src = {SRL_logo} alt="YouTube" height = "100" width = "130" id="image"></img>
 							</button>
 						</div>
 						
