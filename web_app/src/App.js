@@ -20,6 +20,7 @@ function App() {
 	const about = useRef(null);
 	const architecture = useRef(null);
 	const collaborators = useRef(null);
+	const user_case = useRef(null);
 
 	const scrollToSection = (elementRef) => {
 		window.scrollTo({
@@ -39,7 +40,8 @@ function App() {
 	"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" />
 						</div>
 						<li onClick={() => scrollToSection(about)}>About</li>
-						<li onClick={() => scrollToSection(architecture)}> Architecture and User Case</li>
+						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
+						<li onClick={() => scrollToSection(user_case)}> User Case</li>
 						<li onClick={() => scrollToSection(collaborators)}> Collaborators </li>
 					</ul>
 
@@ -70,40 +72,29 @@ function App() {
 					</motion.div>
 				</section>
 				
-				<section ref = {architecture}  class="section">
-					<div class="box-main">
+				<section ref = {user_case}  class="section">
+					<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
 						<div class="secondHalf">
 							<h1 class="text_center"  id="program">
-							User case               
-						</h1>
+								User case               
+							</h1>
+							<img  src = {img1} alt="User case" height = "270" width = "400" id="image"></img>
+						</div>
+					</motion.div>
+				</section>
 
-						
+				<section ref = {architecture}  class="section">
+					<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
+						<div class="secondHalf" id="architecture">	
 
-						<img  src = {img1} alt="User case" height = "270" width = "400" id="image">
-							
-						</img>
+							<h1 class="text_center"  id="program">
+								Architecture               
+							</h1>
 
-						
-
-					</div>
-
-					<span></span>
-
-					<div class="secondHalf" id="architecture">	
-
-						
-						<h1 class="text_center"  id="program">
-							Architecture               
-						</h1>
-						
-						
-
-						<img src = {img2} alt="Architecture" height = "270" width = "400" id="image">
-							
-						</img>
+							<img src = {img2} alt="Architecture" height = "270" width = "400" id="image"></img>
 
 						</div>
-					</div>
+					</motion.div>
 				</section>
 				
 				
