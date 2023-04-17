@@ -15,6 +15,10 @@ import img1 from './Pictures/ichores1.png';
 import img2 from './Pictures/ichores2.png';
 
 
+import img3 from './github.png'
+import img4 from './youtube.png'
+import img5 from './SRL_logo.svg'
+
 //flex-direction: row-reverse;
 
 
@@ -137,6 +141,33 @@ function App() {
 								linki
 							</p>
 						</div>
+				</div>
+				</section>		
+			
+
+
+			<section class="section">
+				<div class="box-main">
+					<div class="secondHalf">
+						<h1 class="text-big" id="program">
+							Collaborators
+						</h1>
+						<div align-items="center">
+							<button class="button">
+							
+								<a href="https://en.wikipedia.org/wiki/Prague" class = "button">PRAGUE LAB</a> 
+							</button>
+							<button class="button">
+								<a href="https://en.wikipedia.org/wiki/Bratislava" class = "button">BRATISLAVA LAB</a>
+							</button>
+							
+							<button class="button">
+								<img   href="https://en.uj.edu.pl/" src = {img5} alt="YouTube" height = "100" width = "130" id="image"></img>
+							</button>
+						</div>
+						
+						
+					</div>
 					</div>
 				</section>
 				
