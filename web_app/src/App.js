@@ -5,12 +5,14 @@ import dots_red from './Pictures/dots-nine-fill-svgrepo-com.svg';
 import dots_blue from './Pictures/dots_blue.svg';
 import zigzag from './Pictures/shape-zigzag-svgrepo-com.svg';
 import  wavy_dash from './Pictures/wavy-dash-svgrepo-com.svg';
+import  logo from './Pictures/logo.svg';
+import  logo_small from './Pictures/logo_small.svg';
 import {render} from "react-dom";
 import {delay, motion} from  "framer-motion";
 import {useRef} from "react";
 
-import img1 from './ichores1.png';
-import img2 from './ichores2.png';
+import img1 from './Pictures/ichores1.png';
+import img2 from './Pictures/ichores2.png';
 
 
 //flex-direction: row-reverse;
@@ -35,10 +37,7 @@ function App() {
 				
 				<motion.nav class="navbar background" whileHover={{backgroundColor: "rgba(245,245,245,1)"}}>
 					<ul class="nav-list">
-						<div class="logo">
-							<img src=
-	"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" />
-						</div>
+						
 						<li onClick={() => scrollToSection(about)}>About</li>
 						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
 						<li onClick={() => scrollToSection(user_case)}> User Case</li>
@@ -50,11 +49,11 @@ function App() {
 
 				
 
-				<section class="section">
+				<section class="landing">
 					<div >
-							<h1 class="title">
-								iChores
-							</h1>
+						<div class="logo">
+							<img src={logo}  ></img>
+						</div>
 					</div>
 				</section>
 				<section ref = {about} class="section">
@@ -98,34 +97,34 @@ function App() {
 				</section>
 				
 				
-				
-				<motion.div class = "circle1" animate={{ y:5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+			
+					<motion.div class = "circle1" animate={{ y:5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						
+							<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
+					</motion.div>
+					<motion.div class = "circle3" animate={{ y:-10, x:-8}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						<Circle  r={80} fill={{color:'#2D93AD'}}  />
+					</motion.div>
 					
-						<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
-				</motion.div>
-				<motion.div class = "circle3" animate={{ y:-10, x:-8}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-					<Circle  r={80} fill={{color:'#2D93AD'}}  />
-				</motion.div>
-				
-				<motion.div class = "circle2" animate={{ x:3}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-					<Circle  r={100} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#000000'}} strokeWidth={30} />
-					
-				</motion.div>
-				<motion.div class = "circle4" animate={{ y: -3, x:-5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-					<Circle  r={200} fill={{color:'#28869e'}}  />
+					<motion.div class = "circle2" animate={{ x:3}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						<Circle  r={100} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#000000'}} strokeWidth={30} />
+						
+					</motion.div>
+					<motion.div class = "circle4" animate={{ y: -3, x:-5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						<Circle  r={200} fill={{color:'#28869e'}}  />
 
-				</motion.div>
+					</motion.div>
 
-				<motion.div class = "wavy_dash" animate={{ y: 10}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-					<img src={wavy_dash} alt="k"fill="black" object-fit={"none"}></img>
-				</motion.div>
-				<motion.div class = "dots1" animate={{ y: 19}} transition={{  type: "tween",duration: 5,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-					<img src={dots_red} alt="k" height={"50%"} width={"50%"}></img>
-				</motion.div>
+					<motion.div class = "wavy_dash" animate={{ y: 10}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						<img src={wavy_dash} alt="k"  height={"70%"} width={"70%"} ></img>
+					</motion.div>
+					<motion.div class = "dots1" animate={{ y: 19}} transition={{  type: "tween",duration: 5,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						<img src={dots_red} alt="k" height={"50%"} width={"50%"}></img>
+					</motion.div>
 
-				<motion.div class = "dots2" animate={{ y: 30, x: 2}} transition={{  type: "tween",duration: 10,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-					<img src={dots_blue} alt="k" height={"70%"} width={"70%"}></img>
-				</motion.div>
+					<motion.div class = "dots2" animate={{ y: 30, x: 2}} transition={{  type: "tween",duration: 10,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						<img src={dots_blue} alt="k" height={"70%"} width={"70%"}></img>
+					</motion.div>
 
 				<section ref = {collaborators}  class="section">
 					<div class="box-main">
@@ -141,11 +140,13 @@ function App() {
 					</div>
 				</section>
 				
-				<motion.footer className="footer" whileHover={{backgroundColor :"rgba(250, 250, 250, 1)"}}>
+				<footer className="footer" >
 					<p className="text-footer">
 						jakis footer, moze logo uj czy cos
 					</p>
-				</motion.footer>
+				</footer>
+
+				
 				
 			</div>
 			</div>
