@@ -3,16 +3,14 @@ import './App.css';
 import {Circle} from 'react-shapes';
 import dots_red from './Pictures/dots-nine-fill-svgrepo-com.svg';
 import dots_blue from './Pictures/dots_blue.svg';
-import zigzag from './Pictures/shape-zigzag-svgrepo-com.svg';
 import  wavy_dash from './Pictures/wavy-dash-svgrepo-com.svg';
 import  logo from './Pictures/logo.svg';
-import  logo_small from './Pictures/logo_small.svg';
 import {render} from "react-dom";
 import {delay, motion} from  "framer-motion";
 import {useRef} from "react";
 
-import img1 from './Pictures/ichores1.png';
-import img2 from './Pictures/ichores2.png';
+import user_case_svg from './Pictures/user_case.svg';
+import architecture_svg from './Pictures/architecture.svg';
 import SRL_logo from './Pictures/SRL_logo.svg'
 
 //flex-direction: row-reverse;
@@ -31,7 +29,7 @@ function App() {
 		})
 	}
 	return (
-		<div>
+	
 		<div class ='main_bg'>
 			
 				
@@ -69,12 +67,12 @@ function App() {
 					</motion.div>
 				</section>
 				
-				<section ref = {user_case}  class="section">
-					<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
+				<section ref = {user_case}  class="section" >
+					<motion.div class="box-main" style={{paddingTop: "1%", paddingBottom: "0%"}} whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}} >
 							<h1 class="text_center"  id="program">
 								User case               
 							</h1>
-							<p class="text-small">VISUALS WILL BE INSERTED HERE</p>
+							<img src={user_case_svg} alt="k" height={"90%"} width={"90%"}></img>
 							
 					</motion.div>
 				</section>
@@ -86,7 +84,7 @@ function App() {
 							<h1 class="text_center"  id="program">
 								Architecture               
 							</h1>
-							<p class="text-small">VISUALS WILL BE INSERTED HERE</p>
+							<img src={architecture_svg} alt="k" height={"90%"} width={"100%"}></img>
 
 
 						</div>
@@ -126,11 +124,11 @@ function App() {
 					
 
 			<section ref = {collaborators}  class="section">
-				<div >
-					
-						<h1 class="text-big" id="program">
+			
+						<h1 class="button" id="program">
 							Collaborators
 						</h1>
+			
 						<div class= "buttons">
 						
 							<div class="button">
@@ -141,11 +139,12 @@ function App() {
 							</div>
 							
 							<div class="button">
-								<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} alt="YouTube" height = "100" width = "130" id="image"></img></a>
+								<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} height={"50%"} width={"50%"} ></img></a>
 							</div>
 						</div>
+					
 						
-					</div>
+					
 				</section>
 				
 				<footer className="footer" >
@@ -157,7 +156,7 @@ function App() {
 				
 				
 			</div>
-			</div>
+			
 		
 		
 	)
