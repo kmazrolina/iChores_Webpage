@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Circle} from 'react-shapes';
+import {Circle, Rectangle} from 'react-shapes';
 import dots_red from './Pictures/dots-nine-fill-svgrepo-com.svg';
 import dots_blue from './Pictures/dots_blue.svg';
 import  wavy_dash from './Pictures/wavy-dash-svgrepo-com.svg';
@@ -31,7 +31,7 @@ function App() {
 	return (
 	
 		<div class ='main_bg'>
-			
+			<div class="upper-section">
 				
 				<motion.nav class="navbar background" whileHover={{backgroundColor: "rgba(245,245,245,1)"}}>
 					<ul class="nav-list">
@@ -57,16 +57,17 @@ function App() {
 				<section ref = {about} class="section">
 			
 					<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
-								<h1 class="text-big">
-									About
-								</h1>
+								<h1 class="text-big">About</h1>
 								<p class="text-small">
-								Social service robots are becoming more common, but they need to be designed for people with no experience with robots. Current robots are not easy for non-expert users to use. Our project aims to develop a collaborative interface for domestic service robots that uses language, gestures, and gaze to interact with users. We will conduct user studies to understand how humans naturally collaborate with robots using gestures and gaze. We will test our approach in scenarios involving arranging items on a table and tidying up a room, both in virtual and real-world environments.
+								Social service robotsare becoming more common, but&nbsp;they need to&nbsp;be designed for&nbsp;people with no&nbsp;experience &nbsp;in robotics. Current robots are not&nbsp;easy for&nbsp;non-expert users. Our&nbsp;project aims to&nbsp;develop a&nbsp;collaborative interface for&nbsp;domestic service robots that uses language, gestures, and&nbsp;gaze to&nbsp;interact with users. We will conduct user studies to&nbsp;understand how&nbsp;humans naturally collaborate with&nbsp;robots using gestures and&nbsp;gaze. We&nbsp;will test our&nbsp;approach in&nbsp;scenarios involving arranging items on&nbsp;a&nbsp;table and&nbsp;tidying up a&nbsp;room, both&nbsp;in&nbsp;virtual and&nbsp;real-world&nbsp;environments.
 								</p>
 				
 					</motion.div>
 				</section>
 				
+			</div>
+			<div class="lower_section">
+					
 				<section ref = {user_case}  class="section" >
 					<motion.div class="box-main" style={{paddingTop: "1%", paddingBottom: "0%"}} whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}} >
 							<h1 class="text_center"  id="program">
@@ -123,7 +124,7 @@ function App() {
 
 					
 
-			<section ref = {collaborators}  class="section">
+				<section ref = {collaborators}  class="section">
 			
 						<h1 class="button" id="program">
 							Collaborators
@@ -146,16 +147,18 @@ function App() {
 						
 					
 				</section>
-				
-				<footer className="footer" >
-					<p className="text-footer" >
-						FOOTER: grant information will be included here
-					</p>
-				</footer>
+			</div>
+
+
+			<footer className="footer" >
+				<p className="text-footer" >
+					FOOTER: grant information will be included here
+				</p>
+			</footer>
 
 				
 				
-			</div>
+		</div>
 			
 		
 		
