@@ -1,5 +1,4 @@
 
-
 * {
 	margin: 0;
 	padding: 0;
@@ -42,16 +41,14 @@
 	align-items: center;
 }
 
-
-
-.small_logo{
-	padding: 10px;
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%; 
+	height: 100%;
 }
 
-.logo_img {
-	width: 180px;
-	border-radius: 50px;
-}
 
 .nav-list li {
 	list-style: none;
@@ -67,17 +64,6 @@
 	color: grey;
 }
 
-.rightnav {
-	width: 30%;
-	text-align: justify;
-}
-
-#search {
-	padding: 5px;
-	font-size: 17px;
-	border: 2px solid rgb(0, 0, 0);
-	border-radius: 9px;
-}
 
 .box-main {
 	background: rgba(252, 252, 252, 0.9);
@@ -96,39 +82,7 @@
 }
 
 
-.firsthalf {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.secondhalf {
-	width: 30%;
-	display: inline-block;
-	padding-left: 3cm;
-	padding-right: 3cm;
-
-}
-
-.secondhalf img {
-	width: 70%;
-	border: 4px solid  rgb(252, 252, 252);
-	border-radius: 150px;
-	display: block;
-	margin: auto;
-}
-
-
 .text-big {
-	font-weight: 500;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 30px;
-	padding-bottom: 30px;
-	text-align: left;
-}
-
-.text_center{
 	font-weight: 500;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size: 30px;
@@ -142,13 +96,6 @@
 	text-align: justify;
 }
 
-.title {
-	font-weight: 1000;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 100px;
-	padding-top: 100px;
-}
-
 
 
 
@@ -159,10 +106,7 @@
 	align-items: center;
 	justify-content: space-between;
 	padding-bottom: 100px;
-	
-	
 
-	
 }
 
 
@@ -177,12 +121,6 @@
 }
 
 
-.section-Left {
-	white-space: nowrap;
-	overflow-x: auto;
-	max-width: 500px;
-}
-
 .center {
 	text-align: center;
 }
@@ -195,7 +133,8 @@
 	font-family: 'Ubuntu', sans-serif;
 	display: flex;
 	justify-content: center;
-	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
 }
 
 
@@ -278,21 +217,6 @@
 
 }
 
-.padding_image1{
-	padding-right: 1cm;
-	padding-left: 2cm;
-	padding-top: 0.7cm;
-	padding-bottom: 1cm;
-
-	
-
-}
-.padding_image2{
-	padding-right: 1cm;
-	padding-left: 2cm;
-	padding-top: 0.7cm;
-	padding-bottom: 1cm;
-} 
 
 .flex { 
 	display : flex; 
@@ -313,19 +237,8 @@ a:visited {
 	display: flex;
 	align-items: center;
 }
-.collab_heading{
 
-	
-	font-weight: 500;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 30px;
-	text-align: center;
-	padding: 10%;
-	background: radial-gradient(circle, rgba(250,250,250,0.5) 21%, rgba(250,250,250,0.3) 38%, rgba(250,250,250,0));
-	border-radius: 100%;
-	font-size: 20px;
 
-}
 .button {
 	background: radial-gradient(circle, rgba(250,250,250,0.5) 21%, rgba(250,250,250,0.3) 38%, rgba(250,250,250,0));
 	border-radius: 100%;
@@ -337,22 +250,7 @@ a:visited {
   }
 
  
-  .upper-section{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding-bottom: 10%;
-  }
-
-  .lower_section{
-	padding-top: 10%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	background: rgb(252, 252, 252,0.97);
- 
-  }
+  
 
   .gradient-finish{
 	background: linear-gradient(0deg, rgba(252,252,252,0.99) 0%, rgba(252,252,252,0) 87%);
@@ -372,6 +270,10 @@ a:visited {
 		max-width: 70%;
 		min-width: 70%;
 	}
+}
+
+.footer{
+	background-color: rgb(0, 0, 0);
 }
 
  
