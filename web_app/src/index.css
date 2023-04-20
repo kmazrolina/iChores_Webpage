@@ -6,16 +6,19 @@
 }
 
 .main_bg{
-
+	display:flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	
 }
 
 .navbar {
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	position: sticky;
-	top: 0;
 	cursor: pointer;
 	
 }
@@ -152,19 +155,8 @@
 	padding-top: 100px;
 }
 
-.btn {
-margin-left: 20px;
-height: 33px;
-width: 70px;
-	color:  rgb(252, 252, 252);
-background-color: #000;
-	cursor: pointer;
-}
 
-.btn-sm {
-	padding: 6px 10px;
-	vertical-align: middle;
-}
+
 
 .section {
 	
@@ -351,6 +343,9 @@ a:visited {
 
  
   .upper-section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	padding-bottom: 10%;
   }
 
@@ -374,7 +369,15 @@ a:visited {
 .transparent_p{
 	opacity: 0%;
 }
-  
+
+
+@media (max-width: 1500px){
+	.box-main{
+
+		max-width: 70%;
+		min-width: 70%;
+	}
+}
 
  
 
