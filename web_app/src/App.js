@@ -14,7 +14,7 @@ import architecture_svg from './Pictures/architecture.svg';
 import SRL_logo from './Pictures/SRL_logo.svg'
 import UJ_logo from './Pictures/logo_uj.svg'
 
-//flex-direction: row-reverse;
+
 
 
 function App() {
@@ -29,7 +29,8 @@ function App() {
 			behavior: "smooth"
 		})
 	}
-	return (
+	
+		return (
 	
 		<div class ='main_bg'>
 			
@@ -133,10 +134,10 @@ function App() {
 						<div class= "buttons">
 						
 							<div class="button">
-								<a   href="https://en.wikipedia.org/wiki/Prague">PRAGUE LAB</a> 
+								<a   href="https://www.ciirc.cvut.cz/">CVUT LAB</a> 
 							</div>
 							<div class="button">
-								<a  href="https://en.wikipedia.org/wiki/Bratislava">BRATISLAVA LAB</a>
+								<a  href="https://www.acin.tuwien.ac.at/">TUW LAB</a>
 							</div>
 							
 							<div class="button">
