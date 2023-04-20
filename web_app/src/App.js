@@ -29,8 +29,36 @@ function App() {
 		})
 	}
 	return (
-	
-		<div class ='main_bg'>
+		<div >
+
+			<motion.div class = "circle1" animate={{ y:5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+						
+				<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
+			</motion.div>
+			<motion.div class = "circle3" animate={{ y:-10, x:-8}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+				<Circle  r={80} fill={{color:'#2D93AD'}}  />
+			</motion.div>
+			
+			<motion.div class = "circle2" animate={{ x:3}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+				<Circle  r={100} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#000000'}} strokeWidth={30} />
+				
+			</motion.div>
+			<motion.div class = "circle4" animate={{ y: -3, x:-5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+				<Circle  r={200} fill={{color:'#28869e'}}  />
+
+			</motion.div>
+
+			<motion.div class = "wavy_dash" animate={{ y: 10}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+				<img src={wavy_dash} alt="k"  height={"70%"} width={"70%"} ></img>
+			</motion.div>
+			<motion.div class = "dots1" animate={{ y: 19}} transition={{  type: "tween",duration: 5,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+				<img src={dots_red} alt="k" height={"50%"} width={"50%"}></img>
+			</motion.div>
+
+			<motion.div class = "dots2" animate={{ y: 30, x: 2}} transition={{  type: "tween",duration: 10,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
+				<img src={dots_blue} alt="k" height={"70%"} width={"70%"}></img>
+			</motion.div>
+		
 			<div class="upper-section">
 				
 				<motion.nav class="navbar background" whileHover={{backgroundColor: "rgba(245,245,245,1)"}}>
@@ -92,35 +120,6 @@ function App() {
 					</motion.div>
 				</section>
 				
-				
-			
-					<motion.div class = "circle1" animate={{ y:5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						
-							<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
-					</motion.div>
-					<motion.div class = "circle3" animate={{ y:-10, x:-8}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						<Circle  r={80} fill={{color:'#2D93AD'}}  />
-					</motion.div>
-					
-					<motion.div class = "circle2" animate={{ x:3}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						<Circle  r={100} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#000000'}} strokeWidth={30} />
-						
-					</motion.div>
-					<motion.div class = "circle4" animate={{ y: -3, x:-5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						<Circle  r={200} fill={{color:'#28869e'}}  />
-
-					</motion.div>
-
-					<motion.div class = "wavy_dash" animate={{ y: 10}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						<img src={wavy_dash} alt="k"  height={"70%"} width={"70%"} ></img>
-					</motion.div>
-					<motion.div class = "dots1" animate={{ y: 19}} transition={{  type: "tween",duration: 5,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						<img src={dots_red} alt="k" height={"50%"} width={"50%"}></img>
-					</motion.div>
-
-					<motion.div class = "dots2" animate={{ y: 30, x: 2}} transition={{  type: "tween",duration: 10,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						<img src={dots_blue} alt="k" height={"70%"} width={"70%"}></img>
-					</motion.div>
 
 					
 
