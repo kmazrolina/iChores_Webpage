@@ -190,6 +190,7 @@
 .text-footer {
 
 	text-align: center;
+	align-items: center;
 	padding: 1.5%;
 	font-family: 'Ubuntu', sans-serif;
 	display: flex;
