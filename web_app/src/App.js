@@ -28,10 +28,25 @@ function App() {
 		})
 	}
 	return (
-		<div >
 
-			<motion.div class = "circle1" animate={{ y:5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
-						
+		<div>
+		<motion.nav class="navbar background" whileHover={{backgroundColor: "rgba(245,245,245,1)"}}>
+				
+				<ul class="nav-list">
+					
+					<li onClick={() => scrollToSection(about)}>About</li>
+					<li onClick={() => scrollToSection(architecture)}> Architecture </li>
+					<li onClick={() => scrollToSection(user_case)}> User&nbsp;Case</li>
+					<li onClick={() => scrollToSection(collaborators)}> Collaborators </li>
+				</ul>
+			
+
+					
+			</motion.nav>
+		<div class="main_bg" >
+			
+			
+			<motion.div class = "circle1" animate={{ y:5}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>	
 				<Circle  r={200} fill={{color:'rgba(255,255,255,0)'}} stroke={{color:'#E65243'}} strokeWidth={16} />
 			</motion.div>
 			<motion.div class = "circle3" animate={{ y:-10, x:-8}} transition={{  type: "tween",duration: 2,repeat: Infinity, repeatType: "reverse", repeatDelay:0 }}>
@@ -58,21 +73,10 @@ function App() {
 				<img src={dots_blue} alt="k" height={"70%"} width={"70%"}></img>
 			</motion.div>
 		
+		
 			<div class="upper-section">
 				
-				<motion.nav class="navbar background" whileHover={{backgroundColor: "rgba(245,245,245,1)"}}>
-					<ul class="nav-list">
-						
-						<li onClick={() => scrollToSection(about)}>About</li>
-						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
-						<li onClick={() => scrollToSection(user_case)}> User Case</li>
-						<li onClick={() => scrollToSection(collaborators)}> Collaborators </li>
-					</ul>
 
-					
-				</motion.nav>
-
-				
 
 				<section class="landing">
 					<div >
@@ -156,6 +160,7 @@ function App() {
 
 				
 				
+		</div>
 		</div>
 			
 		
