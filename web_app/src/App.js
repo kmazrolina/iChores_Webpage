@@ -136,7 +136,7 @@ function App() {
 								<a   href="https://en.wikipedia.org/wiki/Prague">PRAGUE LAB</a> 
 							</div>
 							<div class="button">
-								<a  href="https://en.wikipedia.org/wiki/Bratislava">BRATISLAVA LAB</a>
+								<a  href="https://en.wikipedia.org/wiki/Bratislava">VIENNA LAB</a>
 							</div>
 							
 							<div class="button">
