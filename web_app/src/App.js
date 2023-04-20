@@ -143,7 +143,7 @@ function App() {
 							</div>
 							
 							<div class="button">
-								<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
+								<a  href="https://filozofia.uj.edu.pl/pl_PL/start"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
 							</div>
 						</div>
 					
@@ -154,18 +154,43 @@ function App() {
 
 
 			<footer className="footer">
-			<div class="footer">
-				
-					<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"50%"} width={"50%"} ></img></a>
+				<div class="footer-logo">
+					<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"80%"} width={"80%"} ></img></a>
 					</div>
+					
+					<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"80%"} width={"80%"} ></img></a>
+					</div>
+					
+					<div class="button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo} height={"50%"} ></img></a>
+					</div>		
+				</div>
 
-					<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"50%"} width={"50%"} ></img></a>
-					</div>
-					
-					<div class="button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo} height={"50%"} width={"50%"} ></img></a>
-					</div>
-					
-			</div>
+				<div class="vl"></div>
+
+				<div class="footer-contact">
+					<h1 class="text-footer-big">
+						Contact
+					</h1>
+
+					<p class="text-footer">
+						ul. Ingardena 3/304
+						<br/>
+						<br/>
+						30-060 Kraków
+						<br/>
+						<br/>
+						Poland 
+						<br/>
+						<br/>
+						<br/>
+						<br/>
+						alka.wrobel@student.uj.edu.pl
+						<br/>
+						<br/>
+						tel. +48667704644
+					</p>
+				</div>
+
 			</footer>
 
 				
