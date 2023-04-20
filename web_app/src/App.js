@@ -15,7 +15,8 @@ import SRL_logo from './Pictures/SRL_logo.svg'
 import CIIRCC_logo from './Pictures/CIIRCC_logo.svg'
 import ACIN_logo from './Pictures/ACIN_logo.svg'
 import TU_logo from './Pictures/TU_logo.svg'
-
+import INCOG_logo from './Pictures/INCOG_logo.svg'
+import UJ_logo from './Pictures/logo_uj.png'
 
 
 function App() {
@@ -138,17 +139,15 @@ function App() {
 						<div class= "buttons">
 						
 							<div class="button">
-								<a   href="https://en.wikipedia.org/wiki/Prague">PRAGUE LAB</a> 
+							<a  href="https://incognite-lab.github.io/"><img  src = {INCOG_logo} height={"80%"} width={"80%"} ></img></a>
 							</div>
+
 							<div class="button">
-
-								<a  href="https://en.wikipedia.org/wiki/Bratislava"><img  src = {ACIN_logo} height={"50%"} width={"50%"} ></img></a>
-
-								
+								<a  href="https://www.acin.tuwien.ac.at/"><img  src = {ACIN_logo} height={"60%"} width={"60%"} ></img></a>	
 							</div>
 							
 							<div class="button">
-								<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} height={"50%"} width={"50%"} ></img></a>
+								<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
 							</div>
 						</div>
 					
@@ -158,11 +157,19 @@ function App() {
 			</div>
 
 
-			<footer class="footer">
-				<div class="text=footer">
-				<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"200"} width={"200"} ></img></a></div>
-				<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"200"} width={"200"} ></img></a></div>
-				</div>
+			<footer className="footer">
+			<div class="footer">
+				
+					<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"50%"} width={"50%"} ></img></a>
+					</div>
+
+					<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"50%"} width={"50%"} ></img></a>
+					</div>
+					
+					<div class="button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo} height={"50%"} width={"50%"} ></img></a>
+					</div>
+					
+			</div>
 			</footer>
 
 				
