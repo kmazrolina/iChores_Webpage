@@ -13,7 +13,6 @@ import user_case_svg from './Pictures/user_case.svg';
 import architecture_svg from './Pictures/architecture.svg';
 import SRL_logo from './Pictures/SRL_logo.svg'
 
-//flex-direction: row-reverse;
 
 
 function App() {
@@ -98,7 +97,7 @@ function App() {
 					
 				<section ref = {user_case}  class="section" >
 					<motion.div class="box-main" style={{paddingTop: "1%", paddingBottom: "0%"}} whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}} >
-							<h1 class="text_center"  id="program">
+							<h1 class="text-big"  id="program">
 								User case               
 							</h1>
 							<img src={user_case_svg} alt="k" height={"90%"} width={"90%"}></img>
@@ -108,15 +107,15 @@ function App() {
 
 				<section ref = {architecture}  class="section">
 					<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
-						<div class="secondHalf" id="architecture">	
+						
 
-							<h1 class="text_center"  id="program">
+							<h1 class="text-big"  id="program">
 								Architecture               
 							</h1>
 							<img src={architecture_svg} alt="k" height={"90%"} width={"100%"}></img>
 
 
-						</div>
+						
 					</motion.div>
 				</section>
 				
@@ -125,7 +124,7 @@ function App() {
 
 				<section ref = {collaborators}  class="section">
 			
-						<h1 class="button" id="program">
+						<h1 class="text-big" id="program">
 							Collaborators
 						</h1>
 			
