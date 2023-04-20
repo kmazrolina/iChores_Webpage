@@ -12,6 +12,9 @@ import {useRef} from "react";
 import user_case_svg from './Pictures/user_case.svg';
 import architecture_svg from './Pictures/architecture.svg';
 import SRL_logo from './Pictures/SRL_logo.svg'
+import CIIRCC_logo from './Pictures/CIIRCC_logo.svg'
+import ACIN_logo from './Pictures/ACIN_logo.svg'
+import TU_logo from './Pictures/TU_logo.svg'
 
 
 
@@ -138,7 +141,10 @@ function App() {
 								<a   href="https://en.wikipedia.org/wiki/Prague">PRAGUE LAB</a> 
 							</div>
 							<div class="button">
-								<a  href="https://en.wikipedia.org/wiki/Bratislava">VIENNA LAB</a>
+
+								<a  href="https://en.wikipedia.org/wiki/Bratislava"><img  src = {ACIN_logo} height={"50%"} width={"50%"} ></img></a>
+
+								
 							</div>
 							
 							<div class="button">
@@ -152,10 +158,11 @@ function App() {
 			</div>
 
 
-			<footer className="footer" >
-				<p className="text-footer" >
-					FOOTER: grant information will be included here
-				</p>
+			<footer class="footer">
+				<div class="text=footer">
+				<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"200"} width={"200"} ></img></a></div>
+				<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"200"} width={"200"} ></img></a></div>
+				</div>
 			</footer>
 
 				
