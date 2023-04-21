@@ -262,9 +262,9 @@ a:visited {
 .collab-buttons{
 	display: grid;
 	grid-template-columns: 30% 30% 30%;
-	
 	list-style: none;
 	align-items: center;
+	padding: 10% 0%;
 	
 
 }
@@ -409,21 +409,6 @@ a:visited {
 	
 }
 
-
-@media (max-width: 700px){
-	.box-main{
-		padding: 5%;
-	}
-	
-}
-
-
-@media (max-width: 550){
-	.logo{
-		width:50%;
-	}
-	
-}
 
 
 
