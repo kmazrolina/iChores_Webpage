@@ -29,7 +29,7 @@ function App() {
 
 	const scrollToSection = (elementRef) => {
 		window.scrollTo({
-			top: elementRef.current.offsetTop - 70,
+			top: elementRef.current.offsetTop,
 			behavior: "smooth"
 		})
 	}
@@ -87,51 +87,67 @@ function App() {
 
 						<section class="landing">
 							<div >
-								<div class="center" >
+								<motion.div class="center" 
+									initial={{opacity:0}} 
+									animate={{opacity: 1}} 
+									transition={{duration:1}} >
+									
 									<img class="logo" src={logo}  ></img>
-								</div>
+								</motion.div>
 							</div>
 						</section>
-						<section ref = {about} class="section">
-					
-							<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
-										<h1 class="text-big">About</h1>
-										<p class="text-small">
-										Social service robots are becoming more common, but&nbsp;they need to&nbsp;be designed for&nbsp;people with no&nbsp;experience &nbsp;in robotics. Current robots are not&nbsp;easy for&nbsp;non-expert users. Our&nbsp;project aims to&nbsp;develop a&nbsp;collaborative interface for&nbsp;domestic service robots that uses language, gestures, and&nbsp;gaze to&nbsp;interact with users. We will conduct user studies to&nbsp;understand how&nbsp;humans naturally collaborate with&nbsp;robots using gestures and&nbsp;gaze. We&nbsp;will test our&nbsp;approach in&nbsp;scenarios involving arranging items on&nbsp;a&nbsp;table and&nbsp;tidying up a&nbsp;room, both&nbsp;in&nbsp;virtual and&nbsp;real-world&nbsp;environments.
-										</p>
 						
-							</motion.div>
-						</section>
+						
+					</div>
+					<div  class="lower_section">
 
-						<section ref = {user_case}  class="section" >
-							<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
-									<h1 class="text-big" >
-										User case               
-									</h1>
-									<img src={user_case_svg} alt="k" class="svg" ></img>
-									
+						<motion.section ref = {about} class="section">
+						
+							<motion.div class = "box-main about" initial ={{opacity:0, scale:0.99}} whileInView={{opacity:1, scale: 1}} transition={{duration:1}}>
+							
+								<h1 class="text-big" style={{textAlign: "right"}}>iChores is a project with the scientific goal of creating collaborative human-robot interfaces for intuitive interaction through multiple modalities. </h1>
+								<p class="text-small" style={{textAlign: "right" }}>
+								Our research focuses on investigating the methods that enable a collaborative robot to extract task-relevant information from the gaze and gestures of a human partner, and how gaze, gesture, and speech information can be combined for a more natural and intuitive interface. We employ a user-centered design methodology and explore research questions and hypotheses regarding the impact of combining modalities on the robot's understanding, error count, task duration, user experience, comfort, and trust.
+								</p>
+								
+								
 							</motion.div>
+					
+						</motion.section>
+
+						<section ref = {user_case}  class="section" style={{background: "rgba(250, 250, 250, 0.97)"}} >
+								<motion.div class= "box-main user_case" initial ={{opacity:0, scale:0.99}} whileInView={{opacity:1, scale: 1}} transition={{duration:1}}>
+									
+
+									<div style={{paddingRight: "3vw"}}><img src={user_case_svg} alt="k" class="svg" ></img></div>
+									<div>
+										<h1 class="text-big" style={{textAlign: "left"}}> Imagine a scenario where a homeowner is hosting a party in their living room, and there are plates, cups, and utensils scattered all over the place.</h1>
+										
+										
+										<p class="text-small" style={{textAlign: "left"}}>
+										 The homeowner has a robotic assistant that they can communicate with using natural language, gestures, and gaze. This  demonstrates the potential benefits of a collaborative human-robot interface that allows for intuitive interaction through multiple modalities, making household chores and industrial tasks simpler and more efficient.</p>
+									</div>
+								
+									
+								</motion.div>	
+							
 						</section>
 
 						<section ref = {architecture}  class="section">
-							<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
+							
+							<div class= "box-main">
+
+								<h1 class="text-big"  >
+									Architecture               
+								</h1>
+								<img class="svg" src={architecture_svg} alt="k" ></img>
+
+							</div>
 								
-
-									<h1 class="text-big"  >
-										Architecture               
-									</h1>
-									<img class="svg" src={architecture_svg} alt="k" ></img>
-
-
-								
-							</motion.div>
+							
 						</section>
-						
-					</div>
-					<div ref = {collaborators}  class="lower_section">
-
-						
-					
+						<section class = "section" ref = {collaborators} >
+							<div class= "box-main">
 								<h1 class="text-big" id="program">
 									Collaborators
 								</h1>
@@ -150,14 +166,14 @@ function App() {
 										<a  href="https://en.uj.edu.pl/"> <img class='svg_collab' src = {SRL_logo} ></img></a>
 									</li>
 								</ul>
-							
-								
+							</div>	
+						</section>		
 					
 					</div>
 
 
 					
-			</div>
+				</div>
 
 
 				<footer ref={contact} className="footer">

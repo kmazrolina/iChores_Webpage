@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.69652a4e.css",
-    "main.js": "/static/js/main.cb577e18.js",
+    "main.css": "/static/css/main.70abe0d4.css",
+    "main.js": "/static/js/main.3796b165.js",
     "static/js/787.c6006e9a.chunk.js": "/static/js/787.c6006e9a.chunk.js",
     "static/media/INCOG_logo.svg": "/static/media/INCOG_logo.498af19490fa2537c83d8928c984a6de.svg",
     "static/media/architecture.svg": "/static/media/architecture.b08306700d539eacda1f38ff61fcdbc1.svg",
@@ -16,12 +16,12 @@
     "static/media/dots-nine-fill-svgrepo-com.svg": "/static/media/dots-nine-fill-svgrepo-com.80b7c2b96b0dc949a572b5163c8f9bab.svg",
     "static/media/dots_blue.svg": "/static/media/dots_blue.b226f47a6656df35fb8e94784b747c68.svg",
     "index.html": "/index.html",
-    "main.69652a4e.css.map": "/static/css/main.69652a4e.css.map",
-    "main.cb577e18.js.map": "/static/js/main.cb577e18.js.map",
+    "main.70abe0d4.css.map": "/static/css/main.70abe0d4.css.map",
+    "main.3796b165.js.map": "/static/js/main.3796b165.js.map",
     "787.c6006e9a.chunk.js.map": "/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69652a4e.css",
-    "static/js/main.cb577e18.js"
+    "static/css/main.70abe0d4.css",
+    "static/js/main.3796b165.js"
   ]
 }
