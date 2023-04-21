@@ -25,10 +25,11 @@ function App() {
 	const architecture = useRef(null);
 	const collaborators = useRef(null);
 	const user_case = useRef(null);
+	const contact = useRef(null);
 
 	const scrollToSection = (elementRef) => {
 		window.scrollTo({
-			top: elementRef.current.offsetTop - 60,
+			top: elementRef.current.offsetTop - 70,
 			behavior: "smooth"
 		})
 	}
@@ -40,9 +41,10 @@ function App() {
 					<ul class="nav-list">
 						
 						<li onClick={() => scrollToSection(about)}>About</li>
-						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
 						<li onClick={() => scrollToSection(user_case)}> User&nbsp;Case</li>
+						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
 						<li onClick={() => scrollToSection(collaborators)}> Collaborators </li>
+						<li onClick={() => scrollToSection(contact)}> Contact</li>
 					</ul>
 				
 
@@ -134,20 +136,20 @@ function App() {
 									Collaborators
 								</h1>
 					
-								<div class= "collab-buttons">
+								<ul class= "collab-buttons">
 								
-									<div class="collab-button">
+									<li class="collab-button">
 										<a  href="https://incognite-lab.github.io/"><img class='svg' src = {INCOG_logo}  ></img></a>
-									</div>
+									</li>
 
-									<div class="collab-button">
+									<li class="collab-button">
 										<a  href="https://www.acin.tuwien.ac.at/"><img class='svg' src = {ACIN_logo} ></img></a>	
-									</div>
+									</li>
 									
-									<div class="collab-button">
+									<li class="collab-button">
 										<a  href="https://en.uj.edu.pl/"> <img class='svg' src = {SRL_logo} ></img></a>
-									</div>
-								</div>
+									</li>
+								</ul>
 							
 								
 							
@@ -159,7 +161,7 @@ function App() {
 			</div>
 
 
-				<footer className="footer">
+				<footer ref={contact} className="footer">
 					<div class="footer-logo">
 						<div ><a  href="https://www.ciirc.cvut.cz/cs/"><img class="footer-button"  src = {CIIRCC_logo}  ></img></a>
 						</div>
