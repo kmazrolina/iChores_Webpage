@@ -137,15 +137,15 @@ function App() {
 								<div class= "collab-buttons">
 								
 									<div class="collab-button">
-									<a  href="https://incognite-lab.github.io/"><img  src = {INCOG_logo} height={"80%"} width={"80%"} ></img></a>
+										<a  href="https://incognite-lab.github.io/"><img class='svg' src = {INCOG_logo}  ></img></a>
 									</div>
 
 									<div class="collab-button">
-										<a  href="https://www.acin.tuwien.ac.at/"><img  src = {ACIN_logo} height={"60%"} width={"60%"} ></img></a>	
+										<a  href="https://www.acin.tuwien.ac.at/"><img class='svg' src = {ACIN_logo} ></img></a>	
 									</div>
 									
-									<div class="colbutton">
-										<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
+									<div class="collab-button">
+										<a  href="https://en.uj.edu.pl/"> <img class='svg' src = {SRL_logo} ></img></a>
 									</div>
 								</div>
 							
@@ -161,13 +161,13 @@ function App() {
 
 				<footer className="footer">
 					<div class="footer-logo">
-						<div class="footer-button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo}  ></img></a>
+						<div ><a  href="https://www.ciirc.cvut.cz/cs/"><img class="footer-button"  src = {CIIRCC_logo}  ></img></a>
 						</div>
 						
-						<div class="footer-button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo}  ></img></a>
+						<div ><a  href="https://www.tuwien.at/"><img  class="footer-button" src = {TU_logo}  ></img></a>
 						</div>
 						
-						<div class="footer-button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo}  ></img></a>
+						<div ><a  href="https://en.uj.edu.pl/"><img class="footer-button" src = {UJ_logo}  ></img></a>
 						</div>
 					</div>
 					<div class="vl"></div>
@@ -177,7 +177,7 @@ function App() {
 							Contact
 						</h1>
 
-						<p class="text-footer">
+						<p class="text-footer-small">
 							ul. Ingardena 3/304
 							<br/>
 							<br/>
