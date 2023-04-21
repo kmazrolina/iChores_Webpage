@@ -138,16 +138,16 @@ function App() {
 					
 								<ul class= "collab-buttons">
 								
-									<li class="collab-button">
-										<a  href="https://incognite-lab.github.io/"><img class='svg' src = {INCOG_logo}  ></img></a>
+									<li >
+										<a  href="https://incognite-lab.github.io/"><img class='svg_collab' src = {INCOG_logo}  ></img></a>
 									</li>
 
-									<li class="collab-button">
-										<a  href="https://www.acin.tuwien.ac.at/"><img class='svg' src = {ACIN_logo} ></img></a>	
+									<li >
+										<a  href="https://www.acin.tuwien.ac.at/"><img class='svg_collab' src = {ACIN_logo} ></img></a>	
 									</li>
 									
-									<li class="collab-button">
-										<a  href="https://en.uj.edu.pl/"> <img class='svg' src = {SRL_logo} ></img></a>
+									<li>
+										<a  href="https://en.uj.edu.pl/"> <img class='svg_collab' src = {SRL_logo} ></img></a>
 									</li>
 								</ul>
 							
@@ -162,7 +162,7 @@ function App() {
 
 				<footer ref={contact} className="footer">
 					<div class="footer-logo">
-						<div ><a  href="https://www.ciirc.cvut.cz/cs/"><img class="footer-button"  src = {CIIRCC_logo}  ></img></a>
+						<div ><a  href="https://www.ciirc.cvut.cz/cs/"><img  class="footer-button" src = {CIIRCC_logo}  ></img></a>
 						</div>
 						
 						<div ><a  href="https://www.tuwien.at/"><img  class="footer-button" src = {TU_logo}  ></img></a>
@@ -177,24 +177,16 @@ function App() {
 						<h1 class="text-footer-big">
 							Contact
 						</h1>
-
-						<p class="text-footer-small">
-							ul. Ingardena 3/304
-							<br/>
-							<br/>
-							30-060 Kraków
-							<br/>
-							<br/>
-							Poland 
-							<br/>
-							<br/>
-							<br/>
-							<br/>
-							alka.wrobel@student.uj.edu.pl
-							<br/>
-							<br/>
-							tel. +48667704644
-						</p>		
+						<div class="adress">
+							<p class="text-footer-small">ul. Ingardena 3/304</p>
+							<p class="text-footer-small">30-060 Kraków</p>
+							<p class="text-footer-small">Poland </p>	
+						</div>
+						<div class="contact-data">
+							<p class="text-footer-small">alka.wrobel@student.uj.edu.pl</p>	
+							<p class="text-footer-small">tel. +48667704644</p>	
+						</div>
+							
 					</div>
 
 				</footer>
