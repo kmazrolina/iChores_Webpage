@@ -162,16 +162,6 @@ function App() {
 
 				<footer ref={contact} className="footer">
 					<div class="footer-logo">
-<<<<<<< HEAD
-						<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"50%"} width={"50%"} ></img></a>
-						</div>
-						
-						<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"50%"} width={"50%"} ></img></a>
-						</div>
-						
-						<div class="button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo} height={"10%"} ></img></a>
-						</div>		
-=======
 						<div ><a  href="https://www.ciirc.cvut.cz/cs/"><img class="footer-button"  src = {CIIRCC_logo}  ></img></a>
 						</div>
 						
@@ -180,7 +170,6 @@ function App() {
 						
 						<div ><a  href="https://en.uj.edu.pl/"><img class="footer-button" src = {UJ_logo}  ></img></a>
 						</div>
->>>>>>> e04bbc5c34f897941223fc8453db4364cb120506
 					</div>
 					<div class="vl"></div>
 
