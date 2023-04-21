@@ -476,6 +476,10 @@ a:visited {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
+
+	.nav-list li{
+		height: 1px;
+	}
 	
 }
 
