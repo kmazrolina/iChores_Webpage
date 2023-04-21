@@ -265,7 +265,7 @@ a:visited {
 	
 	list-style: none;
 	align-items: center;
-	justify-content: space-between;
+	
 
 }
 
@@ -273,6 +273,7 @@ a:visited {
 .collab-button {
 	height: 6rem;
 	padding-top: 15%;
+	padding: 15%;
 	
 
   }
@@ -393,6 +394,13 @@ a:visited {
 	
 }
 
+@media (max-width: 1300px){
+	.collab-button{
+		height: 8rem;
+		padding: 15%;
+	}
+	
+}
 
 @media (max-width: 1000px){
 	.section{
@@ -400,6 +408,24 @@ a:visited {
 	}
 	
 }
+
+
+@media (max-width: 700px){
+	.box-main{
+		padding: 5%;
+	}
+	
+}
+
+
+@media (max-width: 550){
+	.logo{
+		width:50%;
+	}
+	
+}
+
+
 
 
 

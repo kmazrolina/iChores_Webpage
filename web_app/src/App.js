@@ -128,9 +128,9 @@ function App() {
 						</section>
 						
 					</div>
-					<div class="lower_section">
+					<div ref = {collaborators}  class="lower_section">
 
-						<section ref = {collaborators}  class="section">
+						
 					
 								<h1 class="text-big" id="program">
 									Collaborators
@@ -152,8 +152,7 @@ function App() {
 								</ul>
 							
 								
-							
-						</section>
+					
 					</div>
 
 
