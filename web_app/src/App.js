@@ -25,10 +25,11 @@ function App() {
 	const architecture = useRef(null);
 	const collaborators = useRef(null);
 	const user_case = useRef(null);
+	const contact = useRef(null);
 
 	const scrollToSection = (elementRef) => {
 		window.scrollTo({
-			top: elementRef.current.offsetTop - 60,
+			top: elementRef.current.offsetTop - 70,
 			behavior: "smooth"
 		})
 	}
@@ -40,9 +41,10 @@ function App() {
 					<ul class="nav-list">
 						
 						<li onClick={() => scrollToSection(about)}>About</li>
-						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
 						<li onClick={() => scrollToSection(user_case)}> User&nbsp;Case</li>
+						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
 						<li onClick={() => scrollToSection(collaborators)}> Collaborators </li>
+						<li onClick={() => scrollToSection(contact)}> Contact</li>
 					</ul>
 				
 
@@ -126,56 +128,41 @@ function App() {
 						</section>
 						
 					</div>
-					<div class="lower_section">
+					<div ref = {collaborators}  class="lower_section">
 
-						<section ref = {collaborators}  class="section">
+						
 					
 								<h1 class="text-big" id="program">
 									Collaborators
 								</h1>
 					
-								<div class= "buttons">
+								<ul class= "collab-buttons">
 								
-									<div class="button">
-									<a  href="https://incognite-lab.github.io/"><img  src = {INCOG_logo} height={"80%"} width={"80%"} ></img></a>
-									</div>
+									<li class="collab-button">
+										<a  href="https://incognite-lab.github.io/"><img class='svg' src = {INCOG_logo}  ></img></a>
+									</li>
 
-									<div class="button">
-										<a  href="https://www.acin.tuwien.ac.at/"><img  src = {ACIN_logo} height={"60%"} width={"60%"} ></img></a>	
-									</div>
+									<li class="collab-button">
+										<a  href="https://www.acin.tuwien.ac.at/"><img class='svg' src = {ACIN_logo} ></img></a>	
+									</li>
 									
-									<div class="button">
-										<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
-									</div>
-								</div>
+									<li class="collab-button">
+										<a  href="https://en.uj.edu.pl/"> <img class='svg' src = {SRL_logo} ></img></a>
+									</li>
+								</ul>
 							
 								
-							
-						</section>
+					
 					</div>
 
 
-					<footer className="footer">
-						<div class="footer">
-						
-							<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"50%"} width={"50%"} ></img></a>
-							</div>
-
-							<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"50%"} width={"50%"} ></img></a>
-							</div>
-							
-							<div class="button">
-								<a  href="https://filozofia.uj.edu.pl/pl_PL/start"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
-							</div>
-						</div>
-
 					
-					</footer>
 			</div>
 
 
-				<footer className="footer">
+				<footer ref={contact} className="footer">
 					<div class="footer-logo">
+<<<<<<< HEAD
 						<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"50%"} width={"50%"} ></img></a>
 						</div>
 						
@@ -184,8 +171,17 @@ function App() {
 						
 						<div class="button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo} height={"10%"} ></img></a>
 						</div>		
+=======
+						<div ><a  href="https://www.ciirc.cvut.cz/cs/"><img class="footer-button"  src = {CIIRCC_logo}  ></img></a>
+						</div>
+						
+						<div ><a  href="https://www.tuwien.at/"><img  class="footer-button" src = {TU_logo}  ></img></a>
+						</div>
+						
+						<div ><a  href="https://en.uj.edu.pl/"><img class="footer-button" src = {UJ_logo}  ></img></a>
+						</div>
+>>>>>>> e04bbc5c34f897941223fc8453db4364cb120506
 					</div>
-
 					<div class="vl"></div>
 
 					<div class="footer-contact">
@@ -193,7 +189,7 @@ function App() {
 							Contact
 						</h1>
 
-						<p class="text-footer">
+						<p class="text-footer-small">
 							ul. Ingardena 3/304
 							<br/>
 							<br/>
@@ -209,7 +205,7 @@ function App() {
 							<br/>
 							<br/>
 							tel. +48667704644
-						</p>
+						</p>		
 					</div>
 
 				</footer>

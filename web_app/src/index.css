@@ -76,11 +76,17 @@
 }
 
 .logo {
-	display: flex;
+	
 	justify-content: center;
 	align-items: center;
+<<<<<<< HEAD
 	width: 100%; 
 	padding-bottom: 4%;
+=======
+	width: 70%;
+	padding: 10% 15%;
+
+>>>>>>> e04bbc5c34f897941223fc8453db4364cb120506
 }
 
 
@@ -261,18 +267,23 @@ a:visited {
 	color: black;
 }
 
-.buttons{
-	display: flex;
+.collab-buttons{
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	list-style: none;
 	align-items: center;
+	padding: 10% 0%;
+	
+
 }
 
 
-.button {
+.collab-button {
+	height: 6rem;
+	padding-top: 15%;
+	padding: 15%;
+	
 
-	padding: 1cm;
-	text-align: center;
-	display: inline-block;
-	font-size: 30%;
   }
 
 
@@ -297,21 +308,7 @@ a:visited {
 	margin-bottom: 2rem;
   }
   
-  button {
-	background-color: #007bff;
-	color: #fff;
-	padding: 1rem 2rem;
-	border: none;
-	border-radius: 4px;
-	font-size: 1.2rem;
-	cursor: pointer;
-	transition: all 0.3s ease;
-  }
-  
-  button:hover {
-	background-color: #0069d9;
-  }
-	
+
 
  
   
@@ -342,40 +339,47 @@ a:visited {
 	align-items: top;
 	width: 50%;
 	justify-content: left;
+	padding: 5%;
+}
+.footer-button{
+	padding:10%;
+	height: 5em;
+	
+	
 }
 
 
-.text-footer {
+.text-footer-small {
 	text-align: left;
-	padding: 1.5%;
 	font-family: 'Ubuntu', sans-serif;
 	color: rgb(255, 255, 255);
-	/*display: flex;*/
 	flex-direction: column;
 	height: 80%;
+	font-size: 1rem;
 }
 
 .text-footer-big {
 	font-weight: 500;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 30px;
-	padding-bottom: 30px;
+	font-size: 1.4rem;
 	text-align: left;
 	color:rgb(255, 255, 255);
-	/*display: flex;*/
+	padding-bottom: 10%;
 }
 
 .footer-contact{
-	padding-left: 20px;
+	padding-left: 10%;
 	align-items: top;
 	justify-content: center;
 }
 
 
+
+
 .vl{
-	border-left: 2px solid rgb(255, 255, 255);
-	height: 400px;
-	/*position: flex;*/
+	border-left: 0.12rem solid rgb(255, 255, 255);
+	height: 20rem;
+
 }
 
 
@@ -398,6 +402,13 @@ a:visited {
 	
 }
 
+@media (max-width: 1300px){
+	.collab-button{
+		height: 8rem;
+		padding: 15%;
+	}
+	
+}
 
 @media (max-width: 1000px){
 	.section{
@@ -405,6 +416,9 @@ a:visited {
 	}
 	
 }
+
+
+
 
 
 
