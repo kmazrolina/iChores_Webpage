@@ -478,7 +478,7 @@ a:visited {
 	}
 
 	.nav-list li{
-		height: 1px;
+		font-size: 0.7rem;
 	}
 	
 }
@@ -511,6 +511,10 @@ a:visited {
 
 	.footer-contact{
 		padding-left: 4%;
+	}
+
+	.nav-list li{
+		font-size: 0.6rem;
 	}
 	
 }
