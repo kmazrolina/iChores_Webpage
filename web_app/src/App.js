@@ -134,17 +134,17 @@ function App() {
 									Collaborators
 								</h1>
 					
-								<div class= "buttons">
+								<div class= "collab-buttons">
 								
-									<div class="button">
+									<div class="collab-button">
 									<a  href="https://incognite-lab.github.io/"><img  src = {INCOG_logo} height={"80%"} width={"80%"} ></img></a>
 									</div>
 
-									<div class="button">
+									<div class="collab-button">
 										<a  href="https://www.acin.tuwien.ac.at/"><img  src = {ACIN_logo} height={"60%"} width={"60%"} ></img></a>	
 									</div>
 									
-									<div class="button">
+									<div class="colbutton">
 										<a  href="https://en.uj.edu.pl/"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
 									</div>
 								</div>
@@ -155,37 +155,21 @@ function App() {
 					</div>
 
 
-					<footer className="footer">
-						<div class="footer">
-						
-							<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"50%"} width={"50%"} ></img></a>
-							</div>
-
-							<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"50%"} width={"50%"} ></img></a>
-							</div>
-							
-							<div class="button">
-								<a  href="https://filozofia.uj.edu.pl/pl_PL/start"> <img  src = {SRL_logo} height={"60%"} width={"60%"} ></img></a>
-							</div>
-						</div>
-
 					
-					</footer>
 			</div>
 
 
 				<footer className="footer">
 					<div class="footer-logo">
-						<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"80%"} width={"80%"} ></img></a>
+						<div class="footer-button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo}  ></img></a>
 						</div>
 						
-						<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"80%"} width={"80%"} ></img></a>
+						<div class="footer-button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo}  ></img></a>
 						</div>
 						
-						<div class="button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo} height={"50%"} ></img></a>
-						</div>		
+						<div class="footer-button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo}  ></img></a>
+						</div>
 					</div>
-
 					<div class="vl"></div>
 
 					<div class="footer-contact">
@@ -209,7 +193,7 @@ function App() {
 							<br/>
 							<br/>
 							tel. +48667704644
-						</p>
+						</p>		
 					</div>
 
 				</footer>
