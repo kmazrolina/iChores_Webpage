@@ -17,7 +17,7 @@ import CIIRCC_logo from './Pictures/CIIRCC_logo.svg'
 import ACIN_logo from './Pictures/ACIN_logo.svg'
 import TU_logo from './Pictures/TU_logo.svg'
 import INCOG_logo from './Pictures/INCOG_logo.svg'
-import UJ_logo from './Pictures/logo_uj.png'
+import UJ_logo from './Pictures/UJ_logo_ostatnieb.svg'
 
 
 function App() {
@@ -97,7 +97,7 @@ function App() {
 							<motion.div class="box-main" whileHover={{backgroundColor :"rgba(252, 252, 252, 1)"}}>
 										<h1 class="text-big">About</h1>
 										<p class="text-small">
-										Social service robotsare becoming more common, but&nbsp;they need to&nbsp;be designed for&nbsp;people with no&nbsp;experience &nbsp;in robotics. Current robots are not&nbsp;easy for&nbsp;non-expert users. Our&nbsp;project aims to&nbsp;develop a&nbsp;collaborative interface for&nbsp;domestic service robots that uses language, gestures, and&nbsp;gaze to&nbsp;interact with users. We will conduct user studies to&nbsp;understand how&nbsp;humans naturally collaborate with&nbsp;robots using gestures and&nbsp;gaze. We&nbsp;will test our&nbsp;approach in&nbsp;scenarios involving arranging items on&nbsp;a&nbsp;table and&nbsp;tidying up a&nbsp;room, both&nbsp;in&nbsp;virtual and&nbsp;real-world&nbsp;environments.
+										Social service robots are becoming more common, but&nbsp;they need to&nbsp;be designed for&nbsp;people with no&nbsp;experience &nbsp;in robotics. Current robots are not&nbsp;easy for&nbsp;non-expert users. Our&nbsp;project aims to&nbsp;develop a&nbsp;collaborative interface for&nbsp;domestic service robots that uses language, gestures, and&nbsp;gaze to&nbsp;interact with users. We will conduct user studies to&nbsp;understand how&nbsp;humans naturally collaborate with&nbsp;robots using gestures and&nbsp;gaze. We&nbsp;will test our&nbsp;approach in&nbsp;scenarios involving arranging items on&nbsp;a&nbsp;table and&nbsp;tidying up a&nbsp;room, both&nbsp;in&nbsp;virtual and&nbsp;real-world&nbsp;environments.
 										</p>
 						
 							</motion.div>
@@ -162,6 +162,16 @@ function App() {
 
 				<footer ref={contact} className="footer">
 					<div class="footer-logo">
+<<<<<<< HEAD
+						<div class="button "><a  href="https://www.ciirc.cvut.cz/cs/"><img  src = {CIIRCC_logo} height={"50%"} width={"50%"} ></img></a>
+						</div>
+						
+						<div class="button"><a  href="https://www.tuwien.at/"><img  src = {TU_logo} height={"50%"} width={"50%"} ></img></a>
+						</div>
+						
+						<div class="button"><a  href="https://en.uj.edu.pl/"><img  src = {UJ_logo} height={"10%"} ></img></a>
+						</div>		
+=======
 						<div ><a  href="https://www.ciirc.cvut.cz/cs/"><img class="footer-button"  src = {CIIRCC_logo}  ></img></a>
 						</div>
 						
@@ -170,6 +180,7 @@ function App() {
 						
 						<div ><a  href="https://en.uj.edu.pl/"><img class="footer-button" src = {UJ_logo}  ></img></a>
 						</div>
+>>>>>>> e04bbc5c34f897941223fc8453db4364cb120506
 					</div>
 					<div class="vl"></div>
 
