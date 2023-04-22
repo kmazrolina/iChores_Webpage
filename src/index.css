@@ -126,8 +126,6 @@
 	justify-items: center;
 	height: 100vh;
 	
-	
-
 }
 
 
@@ -288,6 +286,8 @@ a:visited {
 .lower_section{
 	
 	display: grid;
+	
+	
 	align-items: center;
 	justify-content: center;
 
