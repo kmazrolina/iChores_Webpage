@@ -12,12 +12,14 @@ import { useRef } from "react";
 
 import user_case_svg from './Pictures/user_case.svg';
 import architecture_svg from './Pictures/architecture.svg';
-import SRL_logo from './Pictures/SRL_logo.svg'
-import CIIRCC_logo from './Pictures/CIIRCC_logo.svg'
-import ACIN_logo from './Pictures/ACIN_logo.svg'
-import TU_logo from './Pictures/TU_logo.svg'
-import INCOG_logo from './Pictures/INCOG_logo.svg'
-import UJ_logo from './Pictures/UJ_logo_ostatnieb.svg'
+import SRL_logo from './Pictures/SRL_logo.svg';
+import CIIRCC_logo from './Pictures/CIIRCC_logo.svg';
+import ACIN_logo from './Pictures/ACIN_logo.svg';
+import TU_logo from './Pictures/TU_logo.svg';
+import INCOG_logo from './Pictures/INCOG_logo.svg';
+import UJ_logo from './Pictures/UJ_logo_ostatnieb.svg';
+import mail_icon from './Pictures/mail_icon.svg';
+import phone_icon from './Pictures/phone_icon.svg';
 
 
 function App() {
@@ -105,9 +107,9 @@ function App() {
 
 							<motion.div class="box-main about" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 
-								<h1 class="text-big" style={{ textAlign: "right" }}>iChores is a project with the scientific goal of creating collaborative human-robot interfaces for intuitive interaction through multiple modalities. </h1>
+								<h1 class="text-big" style={{ textAlign: "right" }}>iChores is a project with the scientific goal of creating collaborative human&#8209;robot interfaces for intuitive interaction through multiple modalities. </h1>
 								<p class="text-small" style={{ textAlign: "right" }}>
-									Our research focuses on investigating the methods that enable a collaborative robot to extract task-relevant information from the gaze and gestures of a human partner, and how gaze, gesture, and speech information can be combined for a more natural and intuitive interface. We employ a user-centered design methodology and explore research questions and hypotheses regarding the impact of combining modalities on the robot's understanding, error count, task duration, user experience, comfort, and trust.
+									Our research focuses on&nbsp;investigating the&nbsp;methods that enable a&nbsp;collaborative robot to&nbsp;extract task&#8209;relevant information from&nbsp;the&nbsp;gaze and&nbsp;gestures of&nbsp;a&nbsp;human partner, and&nbsp;how gaze, gesture, and&nbsp;speech information can be&nbsp;combined for&nbsp;a&nbsp;more natural and&nbsp;intuitive interface. We&nbsp;employ a&nbsp;user&#8209;centered design methodology and explore research questions and&nbsp;hypotheses regarding the&nbsp;impact of&nbsp;combining modalities on&nbsp;the&nbsp;robot's understanding, error count, task duration, user experience, comfort, and&nbsp;trust.
 								</p>
 
 
@@ -115,18 +117,12 @@ function App() {
 
 						</motion.section>
 
-						<section ref={user_case} class="section" style={{ background: "rgba(250, 250, 250, 0.97)" }} >
-							<motion.div class="box-main user_case" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
+						<section   class="section" style={{ background: "rgba(45,147,173, 0.97"}} >
+							<motion.div class="box-main imagine" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 2 }}>
 
-
-								<div style={{ paddingRight: "3vw" }}><img src={user_case_svg} alt="k" class="svg" ></img></div>
 								<div>
-									<h1 class="text-medium" style={{ textAlign: "left", paddingTop: "15%" }}> Imagine a scenario where a homeowner is hosting a party in their living room, and there are plates, cups, and utensils scattered all over the place...</h1>
+									<h1 class="text-medium" style={{ textAlign: "left"}}> Imagine a scenario where a&nbsp;homeowner is&nbsp;hosting a&nbsp;party in&nbsp;their living room, and&nbsp;there are plates, cups, and&nbsp;utensils scattered all over the&nbsp;place...</h1>
 
-
-									<p class="text-small" style={{ textAlign: "left" }}>
-										The homeowner has a robotic assistant that they can communicate with using natural language, gestures, and gaze.
-									</p>
 								</div>
 
 
@@ -134,12 +130,28 @@ function App() {
 
 						</section>
 
+						<section  ref={user_case} class="section" style={{ background: "rgba(250, 250, 250, 0.97)" }} >
+							<motion.div  class="box-main user_case" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
+
+
+								<div style={{ paddingRight: "3vw" }}><img src={user_case_svg} alt="k" class="svg" ></img></div>
+								<div>
+									<h1 class="text-medium" style={{ textAlign: "left", paddingTop: "15%" }}> ...the&nbsp;homeowner has a&nbsp;robotic assistant that they can&nbsp;communicate with using natural language, gestures, and&nbsp;gaze.</h1>
+
+								</div>
+
+
+							</motion.div>
+
+						</section>
+						
+
 						<section ref={architecture} class="section">
 
 							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 
-								<h1 class="text-medium" style={{ textAlign: "right" }} >
-									We take the approach of behavior-based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to organize sensory information as percepts, which are used to determine the&nbsp;robot’s&nbsp;behavior.
+								<h1 class="text-medium" style={{ textAlign: "right", textJustify: "initial"  }} >
+									We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts, which are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
 								<img class="svg" src={architecture_svg} alt="k" style={{ paddingLeft: "3vw" }}></img>
 
@@ -196,8 +208,8 @@ function App() {
 							<p class="text-footer-small">Poland </p>
 						</div>
 						<div class="contact-data">
-							<p class="text-footer-small">alka.wrobel@student.uj.edu.pl</p>
-							<p class="text-footer-small">tel. +48667704644</p>
+							<p class="text-footer-small"><img class ="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
+							<p class="text-footer-small"><img class ="contact_svg" src={phone_icon}></img> +48667704644</p>
 						</div>
 					</div>
 				
