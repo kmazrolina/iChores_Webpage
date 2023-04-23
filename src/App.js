@@ -121,7 +121,7 @@ function App() {
 							<motion.div class="box-main imagine" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 2 }}>
 
 								<div>
-									<h1 class="text-medium" style={{ textAlign: "left"}}> Imagine a scenario where a&nbsp;homeowner is&nbsp;hosting a&nbsp;party in&nbsp;their living room, and&nbsp;there are plates, cups, and&nbsp;utensils scattered all over the&nbsp;place...</h1>
+									<h1 class="text-big" style={{ textAlign: "left"}}> Imagine a scenario where a&nbsp;homeowner is&nbsp;hosting a&nbsp;party in&nbsp;their living room, and&nbsp;there are plates, cups, and&nbsp;utensils scattered all over the&nbsp;place...</h1>
 
 								</div>
 
@@ -134,9 +134,9 @@ function App() {
 							<motion.div  class="box-main user_case" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 
 
-								<div style={{ paddingRight: "3vw" }}><img src={user_case_svg} alt="k" class="svg" ></img></div>
+								<div class="user_case_svg" ><img src={user_case_svg} alt="k" class="svg" ></img></div>
 								<div>
-									<h1 class="text-medium" style={{ textAlign: "left", paddingTop: "15%" }}> ...the&nbsp;homeowner has a&nbsp;robotic assistant that they can&nbsp;communicate with using natural language, gestures, and&nbsp;gaze.</h1>
+									<h1 class="text-small" style={{ textAlign: "left", paddingTop: "15%" }}> ...the&nbsp;homeowner has a&nbsp;robotic assistant that they can&nbsp;communicate with using natural language, gestures, and&nbsp;gaze.</h1>
 
 								</div>
 
@@ -150,10 +150,10 @@ function App() {
 
 							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 
-								<h1 class="text-medium" style={{ textAlign: "right", textJustify: "initial"  }} >
+								<h1 class="text-small architecture_h1" >
 									We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts, which are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
-								<img class="svg" src={architecture_svg} alt="k" style={{ paddingLeft: "3vw" }}></img>
+								<img class="svg architecture_svg" src={architecture_svg} alt="k" ></img>
 
 							</motion.div>
 
@@ -163,7 +163,7 @@ function App() {
 							<motion.div class="box-main collaborators"
 							initial={{ opacity: 0, scale: 0.99 }} 
 							whileInView={{ opacity: 1, scale: 1 }} 
-							transition={{ duration: 1 }}>
+							transition={{ duration: 2 }}>
 								<h1 class="text-big" >
 									Collaborators
 								</h1>
@@ -198,18 +198,18 @@ function App() {
 				<footer ref={contact} className="footer">
 				
 					<div class="contact">
-						<h1 class="text-footer-big">
+						<h1 class="text-big">
 							Contact
 						</h1>
 						<hr></hr>
 						<div class="address">
-							<p class="text-footer-small">ul. Ingardena 3/304</p>
-							<p class="text-footer-small">30-060 Kraków</p>
-							<p class="text-footer-small">Poland </p>
+							<p class="text-small">ul. Ingardena 3/304</p>
+							<p class="text-small">30-060 Kraków</p>
+							<p class="text-small">Poland </p>
 						</div>
 						<div class="contact-data">
-							<p class="text-footer-small"><img class ="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
-							<p class="text-footer-small"><img class ="contact_svg" src={phone_icon}></img> +48667704644</p>
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
+							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48667704644</p>
 						</div>
 					</div>
 				
