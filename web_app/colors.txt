@@ -1,7 +1,0 @@
-background: rgb(255,255,255)
-menu_bar: rgb(252, 252, 252);
-light_red: '#E65243'
-green: '#B4C292'
-blue: '#2D93AD'
-darker_blue: '#28869e'
-off_white: rgb(239, 239, 239)
