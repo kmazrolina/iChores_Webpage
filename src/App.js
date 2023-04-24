@@ -208,7 +208,7 @@ function App() {
 
 										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.acin.tuwien.ac.at/"><img class='svg_collab' src={ACIN_logo} ></img></motion.a>
 
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://en.uj.edu.pl/"> <img class='svg_collab' src={SRL_logo} ></img></motion.a>
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://filozofia.uj.edu.pl/"> <img class='svg_collab' src={SRL_logo} ></img></motion.a>
 									</div>
 									<div class="buttons_row">
 										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.ciirc.cvut.cz/cs/"><img class="svg_collab" src={CIIRCC_logo}  ></img></motion.a>
@@ -246,8 +246,8 @@ function App() {
 							<p class="text-small">Poland </p>
 						</div>
 						<div class="contact-data">
-							<p class="text-small"><img class="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
-							<p class="text-small"><img class="contact_svg" src={phone_icon}></img> +48667704644</p>
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
+							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
 						</div>
 					</div>
 
