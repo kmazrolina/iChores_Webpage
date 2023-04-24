@@ -570,11 +570,25 @@ h1 {
 		padding: 10vh 14vw;
 	}
 
+	.addresses{
+		
+		grid-template-columns: 100%;
+		row-gap: 3vh;
+	}
+	.footer{
+		height: 70vh;
+	}
+	
+
 }
 
 @media(max-width: 370px){
+	.collab-buttons{
+		padding-top:6vh;
+	}
 	.svg_collab{
-		height: 4vh;
+		
+		width: 30vw;
 	}
 }
 
