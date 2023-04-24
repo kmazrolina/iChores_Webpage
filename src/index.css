@@ -116,6 +116,7 @@
 	font-size: calc(0.9rem + 0.5vw);
 	text-align: justify;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 
@@ -355,7 +356,9 @@ h1 {
 .contact_svg {
 	height: 3vh;
 	padding-top: 1vh;
+	padding-bottom: 1vh;
 	padding-right: 1vw;
+	vertical-align: middle;
 }
 .addresses{
 	display: grid;
@@ -363,6 +366,8 @@ h1 {
 	justify-content: center;
 	padding: 0vh 0vw 5vh 10vw;
 	width: 90vw;
+	
+
 }
 
 
