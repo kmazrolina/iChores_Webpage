@@ -312,74 +312,58 @@ h1 {
 	background-color: rgb(0, 0, 0);
 	display: grid;
 	align-items: center;
-	height: 45vh;
+	justify-items: left;
+	height: 40vh;
 	width: 100vw;
-	grid-template-rows: 50% 50%;
-	grid-template-columns: 33% 33% 33%;
-	gap: 0vh;
-
+	
+	
 }
 
 
-.footer div h1 {
+.footer-text-big{
 	text-align: left;
 	color: rgb(255, 255, 255);
 	flex-direction: column;
 	font-size: 3vh;
 	padding: 0.3vh;
+	font-weight: 400;
+	font-family: 'Ubuntu', 'Ysabeau', sans-serif;
 }
-.footer div div p {
+
+.footer-text-small {
 	font-size: 2vh;
 	text-align: left;
 	color: rgb(255, 255, 255);
 	padding-bottom: 0.1vh;
+	font-family: 'Saira Condensed', serif;
 }
 
 .contact {
 	display: grid;
 	justify-content: left;
-	padding: 0vh 10vw;
-	grid-row: 1;
-	grid-column: 1;
+	padding: 5vh 0vw 0vh 10vw;
 }
+
 .contact hr {
 	background: rgb(255, 255, 255);
 	height: 0.1vh;
 	width: 20vw;
+
 }
 
-.addressINCOG{
-
-	justify-content: left;
-	padding: 0vh 10vw;
-	grid-row: 2;
-	grid-column: 1;
-}
-
-.addressACIN{
-	/*padding-bottom: 3vh;
-	padding-top: 3vh;*/
-	justify-content: left;
-	padding: 0vh 10vw;
-	grid-row: 2;
-	grid-column: 2;
-}
-
-.addressSRL{
-	/*padding-bottom: 3vh;
-	padding-top: 3vh;*/
-	justify-content: left;
-	padding: 0vh 10vw;
-	grid-row: 2;
-	grid-column: 3;
-}
 
 .contact_svg {
-	height: 4vh;
+	height: 3vh;
 	padding-top: 1vh;
 	padding-right: 1vw;
 }
-
+.addresses{
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	justify-content: center;
+	padding: 0vh 0vw 5vh 10vw;
+	width: 90vw;
+}
 
 
 
@@ -403,6 +387,9 @@ h1 {
 
 	.svg_collab {
 		height: 8vh;
+	}
+	.addresses{
+		
 	}
 }
 @media(max-width: 950px) {
@@ -448,6 +435,15 @@ h1 {
 	.nav-list{
 		
 		padding: 2vh 10vw 2vh 0vw;
+	}
+
+	.footer-text-big{
+		font-size: 2.5vh;
+
+	}
+
+	.footer-text-small{
+		font-size: 1.8vh;
 	}
 }
 @media (max-width: 700px) {
@@ -522,6 +518,15 @@ h1 {
 	.imagine {
 		padding: 15vh 10vw;
 	}
+
+	.footer-text-big{
+		font-size: 2vh;
+
+	}
+
+	.footer-text-small{
+		font-size: 1.8vh;
+	}
 }
 
 @media(max-width: 550px){
@@ -545,15 +550,15 @@ h1 {
 	}
 
 	.footer {
-		height: 50vh;
+		height: 35vh;
 
 	}
-	.footer div h1 {
-		font-size: 1vh;
+	.footer-text-big{
+		font-size: 2vh;
 
 	}
-	.footer div div p {
-		font-size: 1vh;
+	.footer-text-small {
+		font-size: 1.8vh;
 
 	}
 	.user_case{
@@ -594,18 +599,14 @@ h1 {
 	.svg_collab {
 		height: 10vh;
 	}
+	.collab-buttons{
+		padding-top: 0;
+	}
 	.footer {
 		height: 50vh;
 
 	}
-	.footer div h1 {
-		font-size: 3.5vh;
-
-	}
-	.footer div div p {
-		font-size: 2.5vh;
-
-	}
+	
 
 	.sidebar li {
 		padding: 1rem 0rem;
@@ -663,10 +664,10 @@ h1 {
 	.footer {
 		height: 60vh;
 	}
-	.footer div h1 {
+	.footer-text-big{
 		font-size: 4.5vh;
 	}
-	.footer div div p {
+	.footer-text-small{
 		font-size: 3.5vh;
 	}
 

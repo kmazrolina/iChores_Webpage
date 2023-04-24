@@ -34,53 +34,53 @@ function App() {
 
 	const delay = ms => new Promise(
 		resolve => setTimeout(resolve, ms)
-	  );
+	);
 
-	
+
 	const scrollToSection = (elementRef, bahevior) => {
 		window.scrollTo({
 			top: elementRef.current.offsetTop,
 			behavior: bahevior,
-			
+
 		})
 	}
 
 
 	const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
-	
 
-	const closeSidebarDelayed  = async event  =>{
-		
+
+	const closeSidebarDelayed = async event => {
+
 		await delay(20);
 		setSidebarOpen(!sidebarOpen);
 	};
 
-	
+
 
 	return (
 		<Index width={260} height={20}>
 			<div >
 				<motion.nav class="navbar background" whileHover={{ backgroundColor: "rgba(245,245,245,1)" }}>
 					<ul class="nav-list">
-							<li ><img class="svg_menu"  src={sidebarOpen? close_icon : menu}  onClick={()=>{setSidebarOpen(!sidebarOpen)}} ></img></li>
-							<li class="navbar_links" onClick={() => scrollToSection(about, "smooth")}>About</li>
-							<li class="navbar_links" onClick={() => scrollToSection(user_case, "smooth")}> User&nbsp;Case</li>
-							<li class="navbar_links" onClick={() => scrollToSection(architecture, "smooth")}> Architecture </li>
-							<li class="navbar_links" onClick={() => scrollToSection(collaborators, "smooth")}> Collaborators </li>
-							<li class="navbar_links" onClick={() => scrollToSection(contact, "smooth")}> Contact</li>
+						<li ><img class="svg_menu" src={sidebarOpen ? close_icon : menu} onClick={() => { setSidebarOpen(!sidebarOpen) }} ></img></li>
+						<li class="navbar_links" onClick={() => scrollToSection(about, "smooth")}>About</li>
+						<li class="navbar_links" onClick={() => scrollToSection(user_case, "smooth")}> User&nbsp;Case</li>
+						<li class="navbar_links" onClick={() => scrollToSection(architecture, "smooth")}> Architecture </li>
+						<li class="navbar_links" onClick={() => scrollToSection(collaborators, "smooth")}> Collaborators </li>
+						<li class="navbar_links" onClick={() => scrollToSection(contact, "smooth")}> Contact</li>
 					</ul>
-					<motion.div class="sidebar background" animate={{visibility: sidebarOpen? "visible": "hidden", height: sidebarOpen? "100vh": "0" , width: "100vw", opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 1: 0}} transition={{duration: 0.2}}>
+					<motion.div class="sidebar background" animate={{ visibility: sidebarOpen ? "visible" : "hidden", height: sidebarOpen ? "100vh" : "0", width: "100vw", opacity: sidebarOpen ? 1 : 0 }} initial={{ opacity: sidebarOpen ? 1 : 0 }} transition={{ duration: 0.2 }}>
 						<motion.ul class="sidebar_links"
-						animate={{opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 1: 0}} transition={{duration: 0.3, delay:0.2}}>
-							<li class="sidebar_link" onClick={() => { scrollToSection(about, "auto"); closeSidebarDelayed()}}>About</li>
-							<li class="sidebar_link" onClick={() => {scrollToSection(user_case, "auto"); closeSidebarDelayed() }}> User&nbsp;Case</li>
-							<li class="sidebar_link" onClick={() => {scrollToSection(architecture, "auto"); closeSidebarDelayed()}}> Architecture </li>
-							<li class="sidebar_link" onClick={() => {scrollToSection(collaborators, "auto"); closeSidebarDelayed() }}> Collaborators </li>
+							animate={{ opacity: sidebarOpen ? 1 : 0 }} initial={{ opacity: sidebarOpen ? 1 : 0 }} transition={{ duration: 0.3, delay: 0.2 }}>
+							<li class="sidebar_link" onClick={() => { scrollToSection(about, "auto"); closeSidebarDelayed() }}>About</li>
+							<li class="sidebar_link" onClick={() => { scrollToSection(user_case, "auto"); closeSidebarDelayed() }}> User&nbsp;Case</li>
+							<li class="sidebar_link" onClick={() => { scrollToSection(architecture, "auto"); closeSidebarDelayed() }}> Architecture </li>
+							<li class="sidebar_link" onClick={() => { scrollToSection(collaborators, "auto"); closeSidebarDelayed() }}> Collaborators </li>
 							<li class="sidebar_link" onClick={() => { scrollToSection(contact, "auto"); closeSidebarDelayed() }}> Contact</li>
 						</motion.ul>
 					</motion.div>
-					
+
 
 
 
@@ -90,7 +90,7 @@ function App() {
 				<div class="main_bg" >
 
 
-				<motion.div class="circle1" animate={{ y: 5 }} transition={{ type: "tween", duration: 2, repeat: Infinity, repeatType: "reverse", repeatDelay: 0 }}>
+					<motion.div class="circle1" animate={{ y: 5 }} transition={{ type: "tween", duration: 2, repeat: Infinity, repeatType: "reverse", repeatDelay: 0 }}>
 						<Circle r={200} fill={{ color: 'rgba(255,255,255,0)' }} stroke={{ color: '#E65243' }} strokeWidth={16} />
 					</motion.div>
 					<motion.div class="circle3" animate={{ y: -10, x: -8 }} transition={{ type: "tween", duration: 2, repeat: Infinity, repeatType: "reverse", repeatDelay: 0 }}>
@@ -169,7 +169,7 @@ function App() {
 							<motion.div class="box-main user_case" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 
 
-								<div class="user_case_svg" ><img  src={user_case_svg} alt="k" class="svg" ></img></div>
+								<div class="user_case_svg" ><img src={user_case_svg} alt="k" class="svg" ></img></div>
 								<div>
 									<h1 class="text-small" style={{ textAlign: "left", paddingTop: "15%" }}> ...the&nbsp;homeowner has a&nbsp;robotic assistant that they can&nbsp;communicate with using natural language, gestures, and&nbsp;gaze.</h1>
 
@@ -236,39 +236,36 @@ function App() {
 				<footer ref={contact} className="footer">
 
 					<div class="contact">
-						<h1 class="text-big">
+						<h1 class="footer-text-big">
 							Contact
 						</h1>
 						<hr></hr>
 					</div>
+					<div class="addresses">
+						<div class="address">
 
-					<div class="addressINCOG">
-						<div class="address">
-							<p class="text-big">Incognite</p>
+							<p class="footer-text-big">Incognite</p>
+							<div class="contact-data">
+								<p class="footer-text-small"><img class="contact_svg" src={mail_icon}></img>example@gmail.com</p>
+								<p class="footer-text-small"><img class="contact_svg" src={phone_icon}></img> +48123456789</p>
+							</div>
 						</div>
-						<div class="contact-data">
-							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>example@gmail.com</p>
-							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
-						</div>
-					</div>
 
-					<div class="addressACIN">
 						<div class="address">
-							<p class="text-big">ACIN</p>
+
+							<p class="footer-text-big">ACIN</p>
+							<div class="contact-data">
+								<p class="footer-text-small"><img class="contact_svg" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
+								<p class="footer-text-small"><img class="contact_svg" src={phone_icon}></img> +43 1 58801 – 37601</p>
+							</div>
 						</div>
-						<div class="contact-data">
-							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
-							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +43 1 58801 – 37601</p>
-						</div>
-					</div>
-				
-					<div class="addressSRL">
+
 						<div class="address">
-							<p class="text-big">Social Robotics Lab</p>
-						</div>
-						<div class="contact-data">
-							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>example@uj.eu.pl</p>
-							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
+							<p class="footer-text-big">Social Robotics Lab</p>
+							<div class="contact-data">
+								<p class="footer-text-small"><img class="contact_svg" src={mail_icon}></img>example@uj.eu.pl</p>
+								<p class="footer-text-small"><img class="contact_svg" src={phone_icon}></img> +48123456789</p>
+							</div>
 						</div>
 					</div>
 
