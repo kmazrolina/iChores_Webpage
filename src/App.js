@@ -20,6 +20,10 @@ import INCOG_logo from './Pictures/INCOG_logo.svg';
 import UJ_logo from './Pictures/UJ_logo_ostatnieb.svg';
 import mail_icon from './Pictures/mail_icon.svg';
 import phone_icon from './Pictures/phone_icon.svg';
+import menu from './Pictures/menu.svg';
+import { wait } from '@testing-library/user-event/dist/utils';
+import {useEffect} from 'react';
+
 
 
 function App() {
@@ -29,25 +33,56 @@ function App() {
 	const user_case = useRef(null);
 	const contact = useRef(null);
 
+	const delay = ms => new Promise(
+		resolve => setTimeout(resolve, ms)
+	  );
+
 	const scrollToSection = (elementRef) => {
 		window.scrollTo({
 			top: elementRef.current.offsetTop,
-			behavior: "smooth"
+			behavior: "smooth",
+			
 		})
 	}
+
+
+	const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+	
+
+	const my_f  = (elementRef) => async event  =>{
+		
+		scrollToSection(elementRef);
+		setSidebarOpen(!sidebarOpen);
+	};
+
+	
+
 	return (
 		<Index width={350} height={20}>
 			<div>
 				<motion.nav class="navbar background" whileHover={{ backgroundColor: "rgba(245,245,245,1)" }}>
-
 					<ul class="nav-list">
+							<li ><img class="svg_menu"  src={menu}  onClick={()=>{setSidebarOpen(!sidebarOpen)}} ></img></li>
+							<li class="navbar_links" onClick={() => scrollToSection(about)}>About</li>
+							<li class="navbar_links" onClick={() => scrollToSection(user_case)}> User&nbsp;Case</li>
+							<li class="navbar_links" onClick={() => scrollToSection(architecture)}> Architecture </li>
+							<li class="navbar_links" onClick={() => scrollToSection(collaborators)}> Collaborators </li>
+							<li class="navbar_links" onClick={() => scrollToSection(contact)}> Contact</li>
+						</ul>
+					<motion.div class="sidebar background" animate={{visibility: sidebarOpen? "visible": "hidden", height: sidebarOpen? "105vh": "0" , width: "100vw", opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 0: 1}} transition={{duration: 0.2}}>
+						<motion.ul class="sidebar_links"
+						animate={{opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 0: 1}} transition={{duration: 0.3, delay:0.2}}>
+							<li class="sidebar_link" onClick={() => { my_f(about); }}>About</li>
+							<li class="sidebar_link" onClick={() => {my_f(user_case); }}> User&nbsp;Case</li>
+							<li class="sidebar_link" onClick={() => {my_f(architecture); }}> Architecture </li>
+							<li class="sidebar_link" onClick={() => { my_f(collaborators); }}> Collaborators </li>
+							<li class="sidebar_link" onClick={() => { my_f(contact); }}> Contact</li>
+						</motion.ul>
+					</motion.div>
+					
 
-						<li onClick={() => scrollToSection(about)}>About</li>
-						<li onClick={() => scrollToSection(user_case)}> User&nbsp;Case</li>
-						<li onClick={() => scrollToSection(architecture)}> Architecture </li>
-						<li onClick={() => scrollToSection(collaborators)}> Collaborators </li>
-						<li onClick={() => scrollToSection(contact)}> Contact</li>
-					</ul>
+
 
 
 
@@ -117,11 +152,11 @@ function App() {
 
 						</motion.section>
 
-						<section   class="section" style={{ background: "rgba(45,147,173, 0.97"}} >
+						<section class="section" style={{ background: "rgba(45,147,173, 0.97" }} >
 							<motion.div class="box-main imagine" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 2 }}>
 
 								<div>
-									<h1 class="text-big" style={{ textAlign: "left"}}> Imagine a scenario where a&nbsp;homeowner is&nbsp;hosting a&nbsp;party in&nbsp;their living room, and&nbsp;there are plates, cups, and&nbsp;utensils scattered all over the&nbsp;place...</h1>
+									<h1 class="text-big" style={{ textAlign: "left" }}> Imagine a scenario where a&nbsp;homeowner is&nbsp;hosting a&nbsp;party in&nbsp;their living room, and&nbsp;there are plates, cups, and&nbsp;utensils scattered all over the&nbsp;place...</h1>
 
 								</div>
 
@@ -130,8 +165,8 @@ function App() {
 
 						</section>
 
-						<section  ref={user_case} class="section" style={{ background: "rgba(250, 250, 250, 0.97)" }} >
-							<motion.div  class="box-main user_case" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
+						<section ref={user_case} class="section" style={{ background: "rgba(250, 250, 250, 0.97)" }} >
+							<motion.div class="box-main user_case" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 
 
 								<div class="user_case_svg" ><img src={user_case_svg} alt="k" class="svg" ></img></div>
@@ -144,7 +179,7 @@ function App() {
 							</motion.div>
 
 						</section>
-						
+
 
 						<section ref={architecture} class="section">
 
@@ -161,27 +196,30 @@ function App() {
 						</section>
 						<section class="section" ref={collaborators} style={{ background: "rgba(250, 250, 250, 1)" }}>
 							<motion.div class="box-main collaborators"
-							initial={{ opacity: 0, scale: 0.99 }} 
-							whileInView={{ opacity: 1, scale: 1 }} 
-							transition={{ duration: 2 }}>
+								initial={{ opacity: 0, scale: 0.99 }}
+								whileInView={{ opacity: 1, scale: 1 }}
+								transition={{ duration: 2 }}>
 								<h1 class="text-big" >
 									Collaborators
 								</h1>
 								<div class="collab-buttons" >
-									<motion.a whileHover={{scale: 1.1}} transition={{duration: 0.5}} href="https://incognite-lab.github.io/"><img class='svg_collab' src={INCOG_logo}  ></img></motion.a>
+									<div class="buttons_row">
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://incognite-lab.github.io/"><img class='svg_collab' src={INCOG_logo}  ></img></motion.a>
 
-									<motion.a whileHover={{scale: 1.1}} transition={{duration: 0.5}} href="https://www.acin.tuwien.ac.at/"><img class='svg_collab' src={ACIN_logo} ></img></motion.a>
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.acin.tuwien.ac.at/"><img class='svg_collab' src={ACIN_logo} ></img></motion.a>
 
-									<motion.a whileHover={{scale: 1.1}} transition={{duration: 0.5}} href="https://en.uj.edu.pl/"> <img class='svg_collab' src={SRL_logo} ></img></motion.a>
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://en.uj.edu.pl/"> <img class='svg_collab' src={SRL_logo} ></img></motion.a>
+									</div>
+									<div class="buttons_row">
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.ciirc.cvut.cz/cs/"><img class="svg_collab" src={CIIRCC_logo}  ></img></motion.a>
 
-									<motion.a whileHover={{scale: 1.1}} transition={{duration: 0.5}} href="https://www.ciirc.cvut.cz/cs/"><img class="svg_collab" src={CIIRCC_logo}  ></img></motion.a>
-									
 
-									<motion.a whileHover={{scale: 1.1}} transition={{duration: 0.5}} href="https://www.tuwien.at/"><img class="svg_collab" src={TU_logo}  ></img></motion.a>
-									
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.tuwien.at/"><img class="svg_collab" src={TU_logo}  ></img></motion.a>
 
-									<motion.a whileHover={{scale: 1.1}} transition={{duration: 0.5}} href="https://en.uj.edu.pl/"><img class="svg_collab" src={UJ_logo}  ></img></motion.a>
-									
+
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://en.uj.edu.pl/"><img class="svg_collab" src={UJ_logo}  ></img></motion.a>
+									</div>
+
 								</div>
 
 
@@ -196,7 +234,7 @@ function App() {
 
 
 				<footer ref={contact} className="footer">
-				
+
 					<div class="contact">
 						<h1 class="text-big">
 							Contact
@@ -208,11 +246,11 @@ function App() {
 							<p class="text-small">Poland </p>
 						</div>
 						<div class="contact-data">
-							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
-							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48667704644</p>
+							<p class="text-small"><img class="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
+							<p class="text-small"><img class="contact_svg" src={phone_icon}></img> +48667704644</p>
 						</div>
 					</div>
-				
+
 
 				</footer>
 

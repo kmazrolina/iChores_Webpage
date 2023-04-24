@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5345ce54.css",
-    "main.js": "/static/js/main.f0b28861.js",
+    "main.css": "/static/css/main.d96a1aee.css",
+    "main.js": "/static/js/main.56d09431.js",
     "static/js/787.c6006e9a.chunk.js": "/static/js/787.c6006e9a.chunk.js",
     "static/media/INCOG_logo.svg": "/static/media/INCOG_logo.498af19490fa2537c83d8928c984a6de.svg",
     "static/media/architecture.svg": "/static/media/architecture.b08306700d539eacda1f38ff61fcdbc1.svg",
@@ -14,16 +14,16 @@
     "static/media/logo.svg": "/static/media/logo.a22062a09e51043bc3718937024e0c69.svg",
     "static/media/phone_icon.svg": "/static/media/phone_icon.3a3936eedec98439fa56713178ecd374.svg",
     "static/media/wavy-dash-svgrepo-com.svg": "/static/media/wavy-dash-svgrepo-com.06ff62ba3dd18290c91f09ea794cd485.svg",
+    "index.html": "/index.html",
     "static/media/dots-nine-fill-svgrepo-com.svg": "/static/media/dots-nine-fill-svgrepo-com.80b7c2b96b0dc949a572b5163c8f9bab.svg",
     "static/media/dots_blue.svg": "/static/media/dots_blue.b226f47a6656df35fb8e94784b747c68.svg",
-    "index.html": "/index.html",
     "static/media/mail_icon.svg": "/static/media/mail_icon.cb008adc874514ca7146937b6e809385.svg",
-    "main.5345ce54.css.map": "/static/css/main.5345ce54.css.map",
-    "main.f0b28861.js.map": "/static/js/main.f0b28861.js.map",
+    "main.d96a1aee.css.map": "/static/css/main.d96a1aee.css.map",
+    "main.56d09431.js.map": "/static/js/main.56d09431.js.map",
     "787.c6006e9a.chunk.js.map": "/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5345ce54.css",
-    "static/js/main.f0b28861.js"
+    "static/css/main.d96a1aee.css",
+    "static/js/main.56d09431.js"
   ]
 }
