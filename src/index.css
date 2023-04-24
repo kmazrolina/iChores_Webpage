@@ -36,8 +36,7 @@
 .navbar {
 
 	display: grid;
-	align-items: center;
-	justify-content: left;
+	align-items: top;
 	position: sticky;
 	cursor: pointer;
 	top: 0;
@@ -612,7 +611,7 @@ h1 {
 	}
 
 	.about {
-		padding: 0 15vw;
+		padding: 10vh 15vw;
 	}
 
 	.imagine {
@@ -633,4 +632,20 @@ h1 {
 
 
 	
+}
+
+@media( max-width:600px ){
+	.about{
+		padding: 10vh 10vw;
+	}
+
+	.imagine {
+
+		padding: 15vh 10vw;
+	}
+}
+
+@media(max-width: 500px){
+	.collab-buttons{
+		row-gap: 10vh;}
 }

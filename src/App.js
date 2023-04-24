@@ -21,8 +21,7 @@ import UJ_logo from './Pictures/UJ_logo_ostatnieb.svg';
 import mail_icon from './Pictures/mail_icon.svg';
 import phone_icon from './Pictures/phone_icon.svg';
 import menu from './Pictures/menu.svg';
-import { wait } from '@testing-library/user-event/dist/utils';
-import {useEffect} from 'react';
+import close_icon from './Pictures/closeIcon.svg';
 
 
 
@@ -37,10 +36,11 @@ function App() {
 		resolve => setTimeout(resolve, ms)
 	  );
 
-	const scrollToSection = (elementRef) => {
+	
+	const scrollToSection = (elementRef, bahevior) => {
 		window.scrollTo({
 			top: elementRef.current.offsetTop,
-			behavior: "smooth",
+			behavior: bahevior,
 			
 		})
 	}
@@ -50,9 +50,9 @@ function App() {
 
 	
 
-	const my_f  = (elementRef) => async event  =>{
+	const closeSidebarDelayed  = async event  =>{
 		
-		scrollToSection(elementRef);
+		await delay(20);
 		setSidebarOpen(!sidebarOpen);
 	};
 
@@ -63,21 +63,21 @@ function App() {
 			<div>
 				<motion.nav class="navbar background" whileHover={{ backgroundColor: "rgba(245,245,245,1)" }}>
 					<ul class="nav-list">
-							<li ><img class="svg_menu"  src={menu}  onClick={()=>{setSidebarOpen(!sidebarOpen)}} ></img></li>
-							<li class="navbar_links" onClick={() => scrollToSection(about)}>About</li>
-							<li class="navbar_links" onClick={() => scrollToSection(user_case)}> User&nbsp;Case</li>
-							<li class="navbar_links" onClick={() => scrollToSection(architecture)}> Architecture </li>
-							<li class="navbar_links" onClick={() => scrollToSection(collaborators)}> Collaborators </li>
-							<li class="navbar_links" onClick={() => scrollToSection(contact)}> Contact</li>
-						</ul>
-					<motion.div class="sidebar background" animate={{visibility: sidebarOpen? "visible": "hidden", height: sidebarOpen? "105vh": "0" , width: "100vw", opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 0: 1}} transition={{duration: 0.2}}>
+							<li ><img class="svg_menu"  src={sidebarOpen? close_icon : menu}  onClick={()=>{setSidebarOpen(!sidebarOpen)}} ></img></li>
+							<li class="navbar_links" onClick={() => scrollToSection(about, "smooth")}>About</li>
+							<li class="navbar_links" onClick={() => scrollToSection(user_case, "smooth")}> User&nbsp;Case</li>
+							<li class="navbar_links" onClick={() => scrollToSection(architecture, "smooth")}> Architecture </li>
+							<li class="navbar_links" onClick={() => scrollToSection(collaborators, "smooth")}> Collaborators </li>
+							<li class="navbar_links" onClick={() => scrollToSection(contact, "smooth")}> Contact</li>
+					</ul>
+					<motion.div class="sidebar background" animate={{visibility: sidebarOpen? "visible": "hidden", height: sidebarOpen? "100vh": "0" , width: "100vw", opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 1: 0}} transition={{duration: 0.2}}>
 						<motion.ul class="sidebar_links"
-						animate={{opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 0: 1}} transition={{duration: 0.3, delay:0.2}}>
-							<li class="sidebar_link" onClick={() => { my_f(about); }}>About</li>
-							<li class="sidebar_link" onClick={() => {my_f(user_case); }}> User&nbsp;Case</li>
-							<li class="sidebar_link" onClick={() => {my_f(architecture); }}> Architecture </li>
-							<li class="sidebar_link" onClick={() => { my_f(collaborators); }}> Collaborators </li>
-							<li class="sidebar_link" onClick={() => { my_f(contact); }}> Contact</li>
+						animate={{opacity: sidebarOpen? 1: 0}} initial={{opacity: sidebarOpen? 1: 0}} transition={{duration: 0.3, delay:0.2}}>
+							<li class="sidebar_link" onClick={() => { scrollToSection(about, "auto"); closeSidebarDelayed()}}>About</li>
+							<li class="sidebar_link" onClick={() => {scrollToSection(user_case, "auto"); closeSidebarDelayed() }}> User&nbsp;Case</li>
+							<li class="sidebar_link" onClick={() => {scrollToSection(architecture, "auto"); closeSidebarDelayed()}}> Architecture </li>
+							<li class="sidebar_link" onClick={() => {scrollToSection(collaborators, "auto"); closeSidebarDelayed() }}> Collaborators </li>
+							<li class="sidebar_link" onClick={() => { scrollToSection(contact, "auto"); closeSidebarDelayed() }}> Contact</li>
 						</motion.ul>
 					</motion.div>
 					
