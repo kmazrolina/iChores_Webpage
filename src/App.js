@@ -202,17 +202,37 @@ function App() {
 							Contact
 						</h1>
 						<hr></hr>
+					</div>
+
+					<div class="addressINCOG">
 						<div class="address">
-							<p class="text-small">ul. Ingardena 3/304</p>
-							<p class="text-small">30-060 Kraków</p>
-							<p class="text-small">Poland </p>
+							<p class="text-big">Incognite</p>
 						</div>
 						<div class="contact-data">
-							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
 							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
 						</div>
 					</div>
+
+					<div class="addressACIN">
+						<div class="address">
+							<p class="text-big">ACIN</p>
+						</div>
+						<div class="contact-data">
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
+							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +43 1 58801 – 37601</p>
+						</div>
+					</div>
 				
+					<div class="addressSRL">
+						<div class="address">
+							<p class="text-big">Social Robotics Lab</p>
+						</div>
+						<div class="contact-data">
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>contactsrl@uj.eu.pl</p>
+							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
+						</div>
+					</div>
 
 				</footer>
 
