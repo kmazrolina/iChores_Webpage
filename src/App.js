@@ -252,7 +252,6 @@ function App() {
 						</div>
 					</div>
 
-<<<<<<< HEAD
 					<div class="addressACIN">
 						<div class="address">
 							<p class="text-big">ACIN</p>
@@ -272,8 +271,6 @@ function App() {
 							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
 						</div>
 					</div>
-=======
->>>>>>> eba0c40185c6db133b1c721c6b8984df8d65eb2d
 
 				</footer>
 
