@@ -17,9 +17,8 @@
 	background-size: auto;
 }
 .upper-section {
-	display: flex;
+	display: grid;
 	align-items: center;
-	flex-direction: column;
 	justify-content: space-between;
 }
 
@@ -29,27 +28,29 @@
 	position: sticky;
 	cursor: pointer;
 	top: 0;
-	height: 9vh;
+	height: 8vh;
 	width: 100vw;
 	z-index: 3;
 }
 
 .nav-list {
-	display: flex;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
 	align-items: center;
-	justify-items: center;
-	padding: 2vh 0vw;
+	justify-items: left;
+	padding: 2vh 30vw 2vh 0vw;
 
 }
 .nav-list li {
 	list-style: none;
-	padding: 0 2rem;
+	
 	font-family: 'Saira Condensed', serif;
 }
 .nav-list li {
 	background-color: none;
 }
 .navbar_links {}
+
 .svg_menu {
 	visibility: hidden;
 	height: 0vh;
@@ -95,7 +96,7 @@
 	justify-content: center;
 	align-items: center;
 	color: black;
-	flex-direction: column;
+
 	padding: 10vh 19vw;
 
 }
@@ -107,6 +108,7 @@
 	padding-bottom: 1.5rem;
 	text-align: center;
 }
+
 
 .text-small {
 	font-family: 'Saira Condensed', serif;
@@ -312,6 +314,12 @@ h1 {
 	align-items: center;
 	height: 45vh;
 	width: 100vw;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 33% 33% 33%;
+	grid-auto-flow: row;
+	grid-template-areas: 
+	"e1 e2 e3"
+	"r1 r2 r3";
 }
 
 
@@ -333,15 +341,39 @@ h1 {
 	display: grid;
 	justify-content: left;
 	padding: 0vh 10vw;
+	grid-row: 1;
+	grid-column: 1;
 }
 .contact hr {
 	background: rgb(255, 255, 255);
 	height: 0.1vh;
 	width: 20vw;
 }
-.address {
-	padding-bottom: 3vh;
-	padding-top: 3vh;
+
+.addressINCOG{
+
+	justify-content: left;
+	padding: 0vh 10vw;
+	grid-row: 2;
+	grid-column: 1;
+}
+
+.addressACIN{
+	/*padding-bottom: 3vh;
+	padding-top: 3vh;*/
+	justify-content: left;
+	padding: 0vh 10vw;
+	grid-row: 2;
+	grid-column: 2;
+}
+
+.addressSRL{
+	/*padding-bottom: 3vh;
+	padding-top: 3vh;*/
+	justify-content: left;
+	padding: 0vh 10vw;
+	grid-row: 2;
+	grid-column: 3;
 }
 
 .contact_svg {
@@ -351,7 +383,14 @@ h1 {
 }
 
 
+
+
+
+
+
 /*===== @media queries must be at the end of CSS file ======================*/
+
+/*==================max-width=====================*/
 @media(max-width: 1024px) {
 	.about {
 		padding: 15vh 13vw;
@@ -407,6 +446,11 @@ h1 {
 		row-gap: 15vh;
 
 	}
+
+	.nav-list{
+		
+		padding: 2vh 10vw 2vh 0vw;
+	}
 }
 @media (max-width: 700px) {
 	.about {
@@ -417,7 +461,7 @@ h1 {
 	}
 
 	.user_case {
-		grid-template-columns: 80% auto;
+		grid-template-columns: 60% auto;
 		padding: 15vh 10vw;
 	}
 
@@ -430,6 +474,13 @@ h1 {
 	.navbar_links {
 		visibility: hidden;
 		width: 0;
+	}
+
+	.nav-list{
+		padding: 2vh 10vw 2vh 5vw;
+	}
+	.navbar{
+		height: 9vh;
 	}
 
 	.svg_menu {
@@ -457,12 +508,12 @@ h1 {
 		row-gap: 5vh;
 	}
 	.user_case {
-		width: 100%;
-		grid-template-columns: 80% auto;
-		padding: 10vh 0vw;
+	
+		grid-template-columns: 70% auto;
+		padding: 10vh 10vw;
 	}
 	.user_case_svg img {
-		height: 20vh;
+		height: 50vh;
 	}
 
 }
@@ -474,17 +525,61 @@ h1 {
 		padding: 15vh 10vw;
 	}
 }
-@media(max-width: 500px) {
-	.collab-buttons {
-		row-gap: 10vh;
+
+@media(max-width: 550px){
+	.user_case {
+	
+		grid-template-columns: auto;
+		padding: 10vh 10vw;
+	}
+	.user_case_svg img {
+		height: 50vh;
+	}
+	.svg_collab{
+		padding: 4vh 10vw;
+	}
+	
+}
+
+@media (max-width: 415px){
+	.main_bg{
+		grid-template-columns: 100%;
+	}
+
+	.footer {
+		height: 50vh;
+
+	}
+	.footer div h1 {
+		font-size: 1vh;
+
+	}
+	.footer div div p {
+		font-size: 1vh;
+
+	}
+	.user_case{
+		padding: 10vh 14vw;
+	}
+
+}
+
+@media(max-width: 370px){
+	.svg_collab{
+		height: 4vh;
 	}
 }
+
+
+
+
+/*==================max-height=====================*/
 
 @media(max-height: 700px) {
 	.navbar {
 		height: 10vh;
 		padding-top: 2vh;
-		align-items: center;
+		align-items: top;
 	}
 	.user_case {
 		grid-template-columns: 60% auto;

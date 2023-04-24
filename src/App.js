@@ -59,8 +59,8 @@ function App() {
 	
 
 	return (
-		<Index width={350} height={20}>
-			<div>
+		<Index width={260} height={20}>
+			<div >
 				<motion.nav class="navbar background" whileHover={{ backgroundColor: "rgba(245,245,245,1)" }}>
 					<ul class="nav-list">
 							<li ><img class="svg_menu"  src={sidebarOpen? close_icon : menu}  onClick={()=>{setSidebarOpen(!sidebarOpen)}} ></img></li>
@@ -90,7 +90,7 @@ function App() {
 				<div class="main_bg" >
 
 
-					<motion.div class="circle1" animate={{ y: 5 }} transition={{ type: "tween", duration: 2, repeat: Infinity, repeatType: "reverse", repeatDelay: 0 }}>
+				<motion.div class="circle1" animate={{ y: 5 }} transition={{ type: "tween", duration: 2, repeat: Infinity, repeatType: "reverse", repeatDelay: 0 }}>
 						<Circle r={200} fill={{ color: 'rgba(255,255,255,0)' }} stroke={{ color: '#E65243' }} strokeWidth={16} />
 					</motion.div>
 					<motion.div class="circle3" animate={{ y: -10, x: -8 }} transition={{ type: "tween", duration: 2, repeat: Infinity, repeatType: "reverse", repeatDelay: 0 }}>
@@ -240,17 +240,37 @@ function App() {
 							Contact
 						</h1>
 						<hr></hr>
+					</div>
+
+					<div class="addressINCOG">
 						<div class="address">
-							<p class="text-small">ul. Ingardena 3/304</p>
-							<p class="text-small">30-060 Kraków</p>
-							<p class="text-small">Poland </p>
+							<p class="text-big">Incognite</p>
 						</div>
 						<div class="contact-data">
-							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>ichores@gmail.com</p>
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
 							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
 						</div>
 					</div>
 
+					<div class="addressACIN">
+						<div class="address">
+							<p class="text-big">ACIN</p>
+						</div>
+						<div class="contact-data">
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
+							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +43 1 58801 – 37601</p>
+						</div>
+					</div>
+				
+					<div class="addressSRL">
+						<div class="address">
+							<p class="text-big">Social Robotics Lab</p>
+						</div>
+						<div class="contact-data">
+							<p class="text-small"><img class ="contact_svg" src={mail_icon}></img>contactsrl@uj.eu.pl</p>
+							<p class="text-small"><img class ="contact_svg" src={phone_icon}></img> +48123456789</p>
+						</div>
+					</div>
 
 				</footer>
 
