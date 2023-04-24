@@ -169,7 +169,7 @@ function App() {
 							<motion.div class="box-main user_case" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 
 
-								<div class="user_case_svg" ><img src={user_case_svg} alt="k" class="svg" ></img></div>
+								<div class="user_case_svg" ><img  src={user_case_svg} alt="k" class="svg" ></img></div>
 								<div>
 									<h1 class="text-small" style={{ textAlign: "left", paddingTop: "15%" }}> ...the&nbsp;homeowner has a&nbsp;robotic assistant that they can&nbsp;communicate with using natural language, gestures, and&nbsp;gaze.</h1>
 
