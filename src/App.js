@@ -252,7 +252,6 @@ function App() {
 						</div>
 					</div>
 
-
 					<div class="addressACIN">
 						<div class="address">
 							<p class="text-big">ACIN</p>
