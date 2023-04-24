@@ -103,7 +103,6 @@
 }
 
 
-
 .text-small {
 	font-family: 'Saira Condensed', serif;
 	font-weight: 400;
@@ -368,11 +367,13 @@ a:visited {
 	display: grid;
 	align-items: center;
 	height: 45vh;
-
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 33% 33% 33%;
+	grid-auto-flow: row;
+	grid-template-areas: 
+	"e1 e2 e3"
+	"r1 r2 r3";
 }
-
-
-
 
 
 .footer div h1 {
@@ -398,6 +399,8 @@ a:visited {
 	display: grid;
 	justify-content: left;
 	padding: 0vh 10vw;
+	grid-row: 1;
+	grid-column: 1;
 }
 
 .contact hr{
@@ -408,17 +411,40 @@ a:visited {
 	
 }
 
-.address{
-	padding-bottom: 3vh;
-	padding-top: 3vh;
+.addressINCOG{
+	/*padding-bottom: 3vh;
+	padding-top: 3vh;*/
+	justify-content: left;
+	padding: 0vh 10vw;
+	grid-row: 2;
+	grid-column: 1;
 }
 
+.addressACIN{
+	/*padding-bottom: 3vh;
+	padding-top: 3vh;*/
+	justify-content: left;
+	padding: 0vh 10vw;
+	grid-row: 2;
+	grid-column: 2;
+}
+
+.addressSRL{
+	/*padding-bottom: 3vh;
+	padding-top: 3vh;*/
+	justify-content: left;
+	padding: 0vh 10vw;
+	grid-row: 2;
+	grid-column: 3;
+}
 
 .contact_svg{
 	height: 4vh;
 	padding-top: 1vh;
 	padding-right: 1vw;
 }
+
+
 
 
 
