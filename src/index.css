@@ -116,6 +116,7 @@
 	font-size: calc(0.9rem + 0.5vw);
 	text-align: justify;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 
@@ -377,9 +378,11 @@ h1 {
 .contact_svg {
 	height: 4vh;
 	padding-top: 1vh;
+	padding-bottom: 1vh;
 	padding-right: 1vw;
-}
+	vertical-align: middle;
 
+}
 
 
 
