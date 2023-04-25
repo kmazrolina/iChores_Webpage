@@ -11,6 +11,7 @@ html, body {
 	position: absolute;
     overflow-x: hidden;
     width: 100%;
+	height: 100%;
 }
 
 
@@ -98,6 +99,7 @@ html, body {
 	list-style: none;
 	padding: 2rem 0rem;
 	font-family: 'Saira Condensed', serif;
+	font-size: 1rem;
 
 }
 .sidebar_links {
@@ -402,8 +404,166 @@ h1 {
 
 /*===== @media queries must be at the end of CSS file ======================*/
 
+
+/*==================max-height=====================*/
+
+@media(max-height: 700px) {
+	
+	.user_case {
+		grid-template-columns: 60% auto;
+		padding: 10vh 10vw;
+	}
+	.user_case_svg img {
+		height: 50vh;
+	}
+	
+	
+
+}
+@media(max-height: 600px) {
+	
+	.collab-buttons{
+		padding-top: 0;
+	}
+	.footer {
+		height: 50vh;
+
+	}
+	
+
+	.sidebar li {
+		padding: 1rem 0rem;
+		
+
+	}
+
+	.logo{
+		height: 50vh;
+	}
+
+	.navbar{
+		height: 2.9rem;
+	}
+}
+@media(max-height: 500px) {
+	.user_case {
+		grid-template-columns: 70% auto;
+	}
+	.user_case_svg img {
+		height: 60vh
+	}
+	
+	
+	
+	.footer{
+		height: 100vh;
+	}
+
+}
+
+@media(max-height: 400px) {
+	.user_case {
+		grid-template-columns: 70% auto;
+	}
+	.user_case_svg img {
+		height: 70vh
+	}
+	.text-big {
+		font-size: calc(0.9rem + 1vh);
+	}
+	.text-small {
+		font-size: calc(0.7rem + 1vh);
+	}
+	.architecture {
+		padding: 10vh 10vw;
+	}
+	.architecture_svg {
+		height: 60vh;
+	}
+	
+	.footer-text-big{
+		font-size: 1.1rem
+	}
+	.footer-text-small{
+		font-size: 0.8rem;
+	}
+
+	.svg_menu {
+		
+		height: 6vh;
+		width: 6vw;
+	}
+	
+
+	
+
+}
+@media(max-height: 350px) {
+	
+
+
+	.sidebar li {
+		padding: 0.4rem 0rem;
+		font-size: 5vh;
+
+	}
+	.svg_menu {
+	
+		height: 7vh;
+		width: 7vw;
+	}
+
+	
+	
+	.svg_collab{
+		height: 2.5rem;
+	}
+	
+}
+
+@media(max-height: 300px){
+	.section{
+		height: 110vh;
+	}
+	.text-big {
+		font-size: calc(0.8rem + 1vh);
+	}
+	.text-small {
+		font-size: calc(0.7em + 1vh);
+	}
+	
+
+}
+
+@media(max-height: 270px){
+	.sidebar li {
+		padding: 0.3rem 0rem;
+		font-size: 6vh;
+
+	}
+	.svg_menu{
+		height: 10vh;
+	}
+
+	.architecture_svg{
+
+		height: 80vh;
+
+	}
+
+}
+
+@media(max-height:700px) and (max-width:700px) {
+	.footer{
+		height: 100vh;
+	}
+
+	
+	
+}
+
 /*==================max-width=====================*/
-@media(max-device-width: 1024px) {
+@media(max-width: 1024px) {
 	.about {
 		padding: 15vh 13vw;
 	}
@@ -423,13 +583,13 @@ h1 {
 		width: 50vw;
 	}
 }
-@media(max-device-width: 950px) {
+@media(max-width: 950px) {
 	.logo {
 		width: 70vw;
 		height: auto;
 	}
 }
-@media(max-device-width: 900px) {
+@media(max-width: 900px) {
 	.architecture {
 		grid-template-columns: auto;
 	}
@@ -448,7 +608,7 @@ h1 {
 	}
 
 }
-@media(max-device-width: 800px) {
+@media(max-width: 800px) {
 	.logo {
 		height: 20vh;
 	}
@@ -472,7 +632,7 @@ h1 {
 
 	
 }
-@media(max-device-width: 700px) {
+@media(max-width: 700px) {
 	.about {
 		padding: 10vh 13vw;
 	}
@@ -509,7 +669,7 @@ h1 {
 
 	
 }
-@media(max-device-width: 655px) {
+@media(max-width: 655px) {
 	.logo {
 		height: 18vh;
 	}
@@ -537,25 +697,37 @@ h1 {
 	}
 
 }
-@media(max-device-width:600px) {
-	.about {
-		padding: 10vh 10vw;
-	}
-	.imagine {
-		padding: 15vh 10vw;
-	}
-	
-	
-
-	
-}
-
-@media(max-device-width: 550px){
+@media(max-width:600px) {
 	.user_case {
 	
 		grid-template-columns: auto;
 		padding: 10vh 10vw;
 	}
+	.about {
+		padding: 10vh 15vw;
+	}
+	.imagine {
+		padding: 15vh 10vw;
+	}
+	.text-big {
+		font-size: calc(0.5rem + 1vh);
+	}
+	.text-small {
+		font-size: calc(0.5rem + 1vh);
+	}
+	
+	.footer-text-big{
+		font-size: 1rem
+	}
+	.footer-text-small{
+		font-size: 0.8rem;
+	}
+
+	
+}
+
+@media(max-width: 550px){
+	
 	.user_case_svg img {
 		height: 50vh;
 	}
@@ -565,15 +737,11 @@ h1 {
 	
 }
 
-@media(max-device-width: 415px){
+@media(max-width: 415px){
 	.main_bg{
 		grid-template-columns: 100%;
 	}
 
-	.footer {
-		height: 35vh;
-
-	}
 	
 	.user_case{
 		padding: 10vh 14vw;
@@ -585,7 +753,7 @@ h1 {
 		row-gap: 3vh;
 	}
 	.footer{
-		height: 100vh;
+		height: 102vh;
 	}
 	.svg_collab{
 		
@@ -597,7 +765,7 @@ h1 {
 
 }
 
-@media(max-device-width: 370px){
+@media(max-width: 370px){
 	.collab-buttons{
 		padding-top:6vh;
 	}
@@ -607,166 +775,7 @@ h1 {
 
 
 
-/*==================max-height=====================*/
-
-@media(max-device-height: 700px) {
-	
-	.user_case {
-		grid-template-columns: 60% auto;
-		padding: 10vh 10vw;
-	}
-	.user_case_svg img {
-		height: 50vh;
-	}
-	
-	
-
-}
-@media(max-device-height: 600px) {
-	
-	.collab-buttons{
-		padding-top: 0;
-	}
-	.footer {
-		height: 50vh;
-
-	}
-	
-
-	.sidebar li {
-		padding: 1rem 0rem;
-		font-size: 4vh;
-
-	}
-
-	.logo{
-		height: 50vh;
-	}
-
-	.navbar{
-		height: 2.9rem;
-	}
-}
-@media(max-device-height: 500px) {
-	.user_case {
-		grid-template-columns: 70% auto;
-	}
-	.user_case_svg img {
-		height: 60vh
-	}
-	
-	
-	
-	.footer{
-		height: 100vh;
-	}
-
-}
-
-@media(max-device-height: 400px) {
-	.user_case {
-		grid-template-columns: 70% auto;
-	}
-	.user_case_svg img {
-		height: 70vh
-	}
-	.text-big {
-		font-size: calc(0.9rem + 1vh);
-	}
-	.text-small {
-		font-size: calc(0.7rem + 1vh);
-	}
-	.architecture {
-		padding: 10vh 10vw;
-	}
-	.architecture_svg {
-		height: 60vh;
-	}
-	
-	.footer-text-big{
-		font-size: 1.3rem
-	}
-	.footer-text-small{
-		font-size: 1rem;
-	}
-
-	.svg_menu {
-		
-		height: 6vh;
-		width: 6vw;
-	}
-	
-
-	
-
-}
-@media(max-device-height: 350px) {
-	
-
-
-	.sidebar li {
-		padding: 0.4rem 0rem;
-		font-size: 5vh;
-
-	}
-	.svg_menu {
-	
-		height: 7vh;
-		width: 7vw;
-	}
-
-	
-	
-	.svg_collab{
-		height: 2.5rem;
-	}
-	
-}
-
-@media(max-device-height: 300px){
-	.section{
-		height: 110vh;
-	}
-	.text-big {
-		font-size: calc(0.8rem + 1vh);
-	}
-	.text-small {
-		font-size: calc(0.7em + 1vh);
-	}
-	
-
-}
-
-@media(max-device-height: 270px){
-	.sidebar li {
-		padding: 0.3rem 0rem;
-		font-size: 6vh;
-
-	}
-	.svg_menu{
-		height: 10vh;
-	}
-
-	.architecture_svg{
-
-		height: 80vh;
-
-	}
-
-}
-
-@media(max-device-height:700px) and (max-width:700px) {
-	.footer{
-		height: 100vh;
-	}
-
-	
-	
-}
-
-
-
-@media(max-device-width: 700px) or (max-height: 500px){
+@media(max-width: 700px),(max-height: 500px){
 
 	.navbar_links {
 		visibility: hidden;
@@ -782,6 +791,9 @@ h1 {
 	}
 	
 }
+
+
+/*====== aspect-ratio ================*/
 
 @media(max-aspect-ratio: 36/74) and (max-width: 700px) {
 	.footer{
@@ -806,6 +818,8 @@ h1 {
 		padding-top: 0.3rem;
 	}
 }
+
+
 
 @media (min-aspect-ratio: 7/4 ){
 	.svg_menu{
