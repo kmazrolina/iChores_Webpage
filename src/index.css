@@ -6,11 +6,20 @@
 * {
     -webkit-tap-highlight-color: transparent;
 }
+
+html, body {
+	position: absolute;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+
 .main_bg {
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
+	
 	width: 100vw;
  
 
@@ -25,6 +34,7 @@
 	display: grid;
 	align-items: center;
 	justify-content: space-between;
+	
 }
 
 .navbar {
@@ -37,6 +47,7 @@
 	width: 100vw;
 	z-index: 3;
 	justify-items: start;
+	
 }
 
 .nav-list {
@@ -80,6 +91,7 @@
 	background-size: auto;
 	z-index: 2;
 	padding-top: 8vh;
+	
 
 }
 .sidebar li {
@@ -105,6 +117,7 @@
 	color: black;
 
 	padding: 10vh 19vw;
+	
 
 }
 
@@ -133,6 +146,8 @@
 	align-items: center;
 	justify-items: center;
 	height: 100vh;
+	width: 100vw;
+	
 }
 .about {}
 .user_case {
@@ -174,6 +189,7 @@
 	background: linear-gradient(180deg, rgba(252, 252, 252, 1) 11%, rgba(252, 252, 252, 0) 100%);
 	height: 92vh;
 	width: 100vw;
+	
 
 
 }
@@ -191,7 +207,7 @@
 
 /*red circle*/
 .circle1 {
-	display: flex;
+	display: grid;
 	position: fixed;
 	left: 20vw;
 	top: 50vh;
@@ -200,6 +216,7 @@
 }
 /*black circle*/
 .circle2 {
+	display: grid;
 	position: fixed;
 	left: 70vw;
 	top: 70vh;
@@ -209,6 +226,7 @@
 
 /*small blue circle*/
 .circle3 {
+	display: grid;
 	position: fixed;
 	right: 5vw;
 	bottom: 45vh;
@@ -223,6 +241,7 @@
 	z-index: -2;
 }
 .wavy_dash {
+	display: grid;
 	position: fixed;
 	left: 5vw;
 	top: 30vh;
@@ -240,6 +259,7 @@
 }
 /*blue dots*/
 .dots2 {
+	display: grid;
 	position: fixed;
 	left: 60vw;
 	top: 4vh;
@@ -249,9 +269,7 @@
 
 }
 
-.flex {
-	display: flex;
-}
+
 /* unvisited link */
 a:link {
 	color: black;
@@ -385,7 +403,7 @@ h1 {
 /*===== @media queries must be at the end of CSS file ======================*/
 
 /*==================max-width=====================*/
-@media(max-width: 1024px) {
+@media(max-device-width: 1024px) {
 	.about {
 		padding: 15vh 13vw;
 	}
@@ -405,13 +423,13 @@ h1 {
 		width: 50vw;
 	}
 }
-@media(max-width: 950px) {
+@media(max-device-width: 950px) {
 	.logo {
 		width: 70vw;
 		height: auto;
 	}
 }
-@media (max-width: 900px) {
+@media(max-device-width: 900px) {
 	.architecture {
 		grid-template-columns: auto;
 	}
@@ -430,7 +448,7 @@ h1 {
 	}
 
 }
-@media (max-width: 800px) {
+@media(max-device-width: 800px) {
 	.logo {
 		height: 20vh;
 	}
@@ -454,7 +472,7 @@ h1 {
 
 	
 }
-@media (max-width: 700px) {
+@media(max-device-width: 700px) {
 	.about {
 		padding: 10vh 13vw;
 	}
@@ -491,7 +509,7 @@ h1 {
 
 	
 }
-@media (max-width: 655px) {
+@media(max-device-width: 655px) {
 	.logo {
 		height: 18vh;
 	}
@@ -519,7 +537,7 @@ h1 {
 	}
 
 }
-@media(max-width:600px) {
+@media(max-device-width:600px) {
 	.about {
 		padding: 10vh 10vw;
 	}
@@ -532,7 +550,7 @@ h1 {
 	
 }
 
-@media(max-width: 550px){
+@media(max-device-width: 550px){
 	.user_case {
 	
 		grid-template-columns: auto;
@@ -547,7 +565,7 @@ h1 {
 	
 }
 
-@media (max-width: 415px){
+@media(max-device-width: 415px){
 	.main_bg{
 		grid-template-columns: 100%;
 	}
@@ -567,7 +585,7 @@ h1 {
 		row-gap: 3vh;
 	}
 	.footer{
-		height: 70vh;
+		height: 100vh;
 	}
 	.svg_collab{
 		
@@ -579,7 +597,7 @@ h1 {
 
 }
 
-@media(max-width: 370px){
+@media(max-device-width: 370px){
 	.collab-buttons{
 		padding-top:6vh;
 	}
@@ -591,7 +609,7 @@ h1 {
 
 /*==================max-height=====================*/
 
-@media(max-height: 700px) {
+@media(max-device-height: 700px) {
 	
 	.user_case {
 		grid-template-columns: 60% auto;
@@ -604,7 +622,7 @@ h1 {
 	
 
 }
-@media (max-height: 600px) {
+@media(max-device-height: 600px) {
 	
 	.collab-buttons{
 		padding-top: 0;
@@ -629,7 +647,7 @@ h1 {
 		height: 2.9rem;
 	}
 }
-@media (max-height: 500px) {
+@media(max-device-height: 500px) {
 	.user_case {
 		grid-template-columns: 70% auto;
 	}
@@ -645,7 +663,7 @@ h1 {
 
 }
 
-@media (max-height: 400px) {
+@media(max-device-height: 400px) {
 	.user_case {
 		grid-template-columns: 70% auto;
 	}
@@ -682,7 +700,7 @@ h1 {
 	
 
 }
-@media(max-height: 350px) {
+@media(max-device-height: 350px) {
 	
 
 
@@ -705,7 +723,7 @@ h1 {
 	
 }
 
-@media (max-height: 300px){
+@media(max-device-height: 300px){
 	.section{
 		height: 110vh;
 	}
@@ -719,7 +737,7 @@ h1 {
 
 }
 
-@media (max-height: 270px){
+@media(max-device-height: 270px){
 	.sidebar li {
 		padding: 0.3rem 0rem;
 		font-size: 6vh;
@@ -737,7 +755,7 @@ h1 {
 
 }
 
-@media (max-height:700px) and (max-width:700px) {
+@media(max-device-height:700px) and (max-width:700px) {
 	.footer{
 		height: 100vh;
 	}
@@ -748,7 +766,7 @@ h1 {
 
 
 
-@media (max-width: 700px) or (max-height: 500px){
+@media(max-device-width: 700px) or (max-height: 500px){
 
 	.navbar_links {
 		visibility: hidden;

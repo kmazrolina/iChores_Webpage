@@ -59,7 +59,7 @@ function App() {
 
 
 	return (
-		<Index width={260} height={20}>
+		
 			<div >
 				<motion.nav class="navbar background" whileHover={{ backgroundColor: "rgba(245,245,245,1)" }}>
 					<ul class="nav-list">
@@ -273,7 +273,7 @@ function App() {
 
 			</div>
 
-		</Index>
+	
 
 
 
