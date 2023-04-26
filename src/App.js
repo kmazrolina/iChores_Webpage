@@ -77,7 +77,7 @@ function App() {
 					<li class="navbar_links" onClick={() => scrollToSection(user_case, "smooth")}> User&nbsp;Case</li>
 					<li class="navbar_links" onClick={() => scrollToSection(architecture, "smooth")}> Architecture </li>
 					<li class="navbar_links" onClick={() => scrollToSection(collaborators, "smooth")}> Collaborators </li>
-					<li class="navbar_links" onClick={() => scrollToSection(contact, "smooth")}> Contact</li>
+					
 				</ul>
 				<div class={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
 					<ul class={`sidebar_links ${sidebarOpen ? 'open' : 'closed'}`}>
@@ -85,7 +85,7 @@ function App() {
 						<li class="sidebar_link" onClick={() => { scrollToSection(user_case, "auto"); closeSidebarDelayed() }}> User&nbsp;Case</li>
 						<li class="sidebar_link" onClick={() => { scrollToSection(architecture, "auto"); closeSidebarDelayed() }}> Architecture </li>
 						<li class="sidebar_link" onClick={() => { scrollToSection(collaborators, "auto"); closeSidebarDelayed() }}> Collaborators </li>
-						<li class="sidebar_link" onClick={() => { scrollToSection(contact, "auto"); closeSidebarDelayed() }}> Contact</li>
+					
 					</ul>
 				</div>
 
