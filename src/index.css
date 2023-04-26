@@ -224,6 +224,9 @@ body {
 	height: 300vh;
 	z-index: 0;
 }
+.reasoning{
+	background-color:  rgba(252, 252, 252, 1);
+}
 
 
 .lower {

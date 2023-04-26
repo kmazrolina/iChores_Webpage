@@ -229,8 +229,9 @@ function App() {
 							<motion.img class="architecture_svg" src={architecture_svg} alt="k" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}></motion.img>
 							<div class="box-main architecture"></div>
 
-							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-								<h1 class="text-big">Reasoning and decision making</h1>
+							<motion.div class="box-main architecture " initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
+							
+								<h1 class="text-big ">Reasoning and decision making</h1>
 								<h1 class="text-small architecture_h1" >
 									We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.
 								</h1>
@@ -241,8 +242,8 @@ function App() {
 
 						<RenderInBrowser only mobile>
 							<img class="architecture_svg" src={architecture_svg} alt="k" ></img>
-							<div class="box-main architecture">
-								<h1 class="text-big">Reasoning and decision making</h1>
+							<div class="box-main architecture ">
+								<h1 class="text-big  ">Reasoning and decision making</h1>
 								<h1 class="text-small architecture_h1" >
 									We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a>{"\n"}to&nbsp;organize sensory information as&nbsp;percepts, which are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
@@ -264,7 +265,7 @@ function App() {
 
 						<RenderInBrowser only mobile>
 							<div class="box-main architecture">
-								<h1 class="text-big">Robot's actions</h1>
+								<h1 class="text-big architecture_h0">Robot's actions</h1>
 								<h1 class="text-small architecture_h1" >
 									The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
