@@ -49,7 +49,7 @@ function App() {
 	const { scrollYProgress } = useScroll();
 
 	// interpolate the scrollYProgress value from 0-1 to the new viewBox values
-	const viewBoxY = useTransform(scrollYProgress,[0, 1], [0, 0.5]);
+	const viewBoxY = useTransform(scrollYProgress, [0, 1], [0, 0.5]);
 
 	const closeSidebarDelayed = async event => {
 
@@ -72,7 +72,7 @@ function App() {
 					<li class="navbar_links" onClick={() => scrollToSection(user_case, "smooth")}> User&nbsp;Case</li>
 					<li class="navbar_links" onClick={() => scrollToSection(architecture, "smooth")}> Architecture </li>
 					<li class="navbar_links" onClick={() => scrollToSection(collaborators, "smooth")}> Collaborators </li>
-					
+
 				</ul>
 				<div class={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
 					<ul class={`sidebar_links ${sidebarOpen ? 'open' : 'closed'}`}>
@@ -80,7 +80,7 @@ function App() {
 						<li class="sidebar_link" onClick={() => { scrollToSection(user_case, "auto"); closeSidebarDelayed() }}> User&nbsp;Case</li>
 						<li class="sidebar_link" onClick={() => { scrollToSection(architecture, "auto"); closeSidebarDelayed() }}> Architecture </li>
 						<li class="sidebar_link" onClick={() => { scrollToSection(collaborators, "auto"); closeSidebarDelayed() }}> Collaborators </li>
-					
+
 					</ul>
 				</div>
 
@@ -133,7 +133,7 @@ function App() {
 
 						</div>
 					</section>
-					
+
 
 
 				</div>
@@ -225,37 +225,39 @@ function App() {
 
 
 					<section ref={architecture} class="section arch_section">
-						<img class="architecture_svg" src={architecture_svg} alt="k"></img>
-						<div class="box-main architecture"></div>
 						<RenderInBrowser except mobile>
+							<motion.img class="architecture_svg" src={architecture_svg} alt="k" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}></motion.img>
+							<div class="box-main architecture"></div>
+
 							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
 								<h1 class="text-big">Reasoning and decision making</h1>
 								<h1 class="text-small architecture_h1" >
 									We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.
 								</h1>
-								
+
 
 							</motion.div>
 						</RenderInBrowser>
 
 						<RenderInBrowser only mobile>
+							<img class="architecture_svg" src={architecture_svg} alt="k" ></img>
 							<div class="box-main architecture">
 								<h1 class="text-big">Reasoning and decision making</h1>
 								<h1 class="text-small architecture_h1" >
 									We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a>{"\n"}to&nbsp;organize sensory information as&nbsp;percepts, which are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
-								
+
 
 							</div>
 						</RenderInBrowser>
 
 						<RenderInBrowser except mobile>
 							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-								<h1 class="text-big">Robot's actions</h1>
+								<h1 class="text-big architecture_h2">Robot's actions</h1>
 								<h1 class="text-small architecture_h1" >
-								The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
+									The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
-								
+
 
 							</motion.div>
 						</RenderInBrowser>
@@ -264,9 +266,9 @@ function App() {
 							<div class="box-main architecture">
 								<h1 class="text-big">Robot's actions</h1>
 								<h1 class="text-small architecture_h1" >
-								The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
+									The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
-								
+
 
 							</div>
 						</RenderInBrowser>
@@ -274,36 +276,36 @@ function App() {
 					</section>
 					<section class="section collab_section" ref={collaborators} style={{ background: "rgba(250, 250, 250, 1)" }}>
 						<RenderInBrowser except mobile>
-							<motion.div class="box-main collaborators"
-								initial={{ opacity: 0, scale: 0.99 }}
-								whileInView={{ opacity: 1, scale: 1 }}
-								transition={{ duration: 2 }}>
+							<div class="box-main collaborators">
 								<h1 class="text-big" >
 									Collaborators
 								</h1>
 								<div class="collab-buttons" >
-									<div class="buttons_row" style={{justifyContent: "left"}}>
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://incognite-lab.github.io/"><img class='svg_collab' src={INCOG_logo}  ></img></motion.a>
+									<div class="buttons_row" style={{ justifyContent: "left" }}>
+										<motion.a
+											whileHover={{ scale: 1.05 }}
+											transition={{ duration: 0.3 }} href="https://incognite-lab.github.io/"><img class='svg_collab' src={INCOG_logo}  ></img></motion.a>
 
 									</div>
-								
-									<div class="buttons_row" style={{justifyContent: "right"}}>
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.acin.tuwien.ac.at/en/"><img class="svg_collab" src={ACIN_logo}  ></img></motion.a>
 
-										
+									<div class="buttons_row" style={{ justifyContent: "right" }}>
+										<motion.a whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} href="https://www.acin.tuwien.ac.at/en/"><img class="svg_collab" src={ACIN_logo}  ></img></motion.a>
+
+
 									</div>
-									
-									<div class="buttons_row" style={{justifyContent: "center", paddingTop:"10rem"}}>
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://filozofia.uj.edu.pl/"><img class="svg_collab" src={SRL_logo}  ></img></motion.a>
 
-										
+									<div class="buttons_row" style={{ justifyContent: "center", paddingTop: "10rem" }}>
+										<motion.a whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} href="https://filozofia.uj.edu.pl/"><img class="svg_collab" src={SRL_logo}  ></img></motion.a>
+
+
 									</div>
 
 								</div>
 
 
-							</motion.div>
+							</div>
 						</RenderInBrowser>
+
 
 
 					</section>
