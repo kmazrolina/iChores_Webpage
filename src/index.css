@@ -216,7 +216,9 @@ body {
 .architecture_h1 {
 	text-align: right;
 }
-
+.architecture_h0{
+	font-size:  calc(3rem + 1vh);
+}
 .architecture_svg {
 	position:absolute;
 	height: 300vh;

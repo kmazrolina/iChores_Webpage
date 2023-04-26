@@ -253,7 +253,7 @@ function App() {
 
 						<RenderInBrowser except mobile>
 							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-								<h1 class="text-big architecture_h2">Robot's actions</h1>
+								<h1 class="text-big architecture_h0">Robot's actions</h1>
 								<h1 class="text-small architecture_h1" >
 									The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
 								</h1>
