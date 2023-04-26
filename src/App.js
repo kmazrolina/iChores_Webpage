@@ -1,5 +1,4 @@
 import React from 'react';
-import Index from "minimum-window-size";
 import './App.css';
 import { Circle, Rectangle } from 'react-shapes';
 import dots_red from './Pictures/dots-nine-fill-svgrepo-com.svg';
@@ -15,13 +14,9 @@ import { useScroll, useTransform } from "framer-motion";
 import user_case_svg from './Pictures/user_case.svg';
 import architecture_svg from './Pictures/architecture.svg';
 import SRL_logo from './Pictures/bubble_uj.svg';
-import CIIRCC_logo from './Pictures/CIIRCC_logo.svg';
 import ACIN_logo from './Pictures/bubble_acin.svg';
-import TU_logo from './Pictures/TU_logo.svg';
 import INCOG_logo from './Pictures/bubble_incognito.svg';
-import UJ_logo from './Pictures/UJ_logo_ostatnieb.svg';
 import mail_icon from './Pictures/mail_icon.svg';
-import phone_icon from './Pictures/phone_icon.svg';
 import menu from './Pictures/menu.svg';
 import close_icon from './Pictures/closeIcon.svg';
 
