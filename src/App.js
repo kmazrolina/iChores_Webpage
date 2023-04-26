@@ -14,11 +14,11 @@ import { useScroll, useTransform } from "framer-motion";
 
 import user_case_svg from './Pictures/user_case.svg';
 import architecture_svg from './Pictures/phone_icon.svg';
-import SRL_logo from './Pictures/SRL_logo.svg';
+import SRL_logo from './Pictures/bubble_uj.svg';
 import CIIRCC_logo from './Pictures/CIIRCC_logo.svg';
-import ACIN_logo from './Pictures/ACIN_logo.svg';
+import ACIN_logo from './Pictures/bubble_acin.svg';
 import TU_logo from './Pictures/TU_logo.svg';
-import INCOG_logo from './Pictures/INCOG_logo.svg';
+import INCOG_logo from './Pictures/bubble_incognito.svg';
 import UJ_logo from './Pictures/UJ_logo_ostatnieb.svg';
 import mail_icon from './Pictures/mail_icon.svg';
 import phone_icon from './Pictures/phone_icon.svg';
@@ -322,16 +322,7 @@ function App() {
 
 										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://filozofia.uj.edu.pl/"> <img class='svg_collab' src={SRL_logo} ></img></motion.a>
 									</div>
-									<div class="buttons_row">
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.ciirc.cvut.cz/cs/"><img class="svg_collab" src={CIIRCC_logo}  ></img></motion.a>
-
-
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.tuwien.at/"><img class="svg_collab" src={TU_logo}  ></img></motion.a>
-
-
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://en.uj.edu.pl/"><img class="svg_collab" src={UJ_logo}  ></img></motion.a>
-									</div>
-
+									
 								</div>
 
 
