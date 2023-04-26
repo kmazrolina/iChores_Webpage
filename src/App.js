@@ -13,7 +13,7 @@ import RenderInBrowser from 'react-render-in-browser';
 import { useScroll, useTransform } from "framer-motion";
 
 import user_case_svg from './Pictures/user_case.svg';
-import architecture_svg from './Pictures/phone_icon.svg';
+import architecture_svg from './Pictures/architecture.svg';
 import SRL_logo from './Pictures/bubble_uj.svg';
 import CIIRCC_logo from './Pictures/CIIRCC_logo.svg';
 import ACIN_logo from './Pictures/bubble_acin.svg';
@@ -230,7 +230,7 @@ function App() {
 
 
 					<section ref={architecture} class="section arch_section">
-						<img class="svg architecture_svg" src={architecture_svg} alt="k"></img>
+						<img class="architecture_svg" src={architecture_svg} alt="k"></img>
 						<div class="box-main architecture"></div>
 						<RenderInBrowser except mobile>
 							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
@@ -291,13 +291,15 @@ function App() {
 										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://incognite-lab.github.io/"><img class='svg_collab' src={INCOG_logo}  ></img></motion.a>
 
 									</div>
+								
 									<div class="buttons_row" style={{justifyContent: "right"}}>
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.ciirc.cvut.cz/cs/"><img class="svg_collab" src={CIIRCC_logo}  ></img></motion.a>
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.acin.tuwien.ac.at/en/"><img class="svg_collab" src={ACIN_logo}  ></img></motion.a>
 
 										
 									</div>
-									<div class="buttons_row" style={{justifyContent: "center"}}>
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.ciirc.cvut.cz/cs/"><img class="svg_collab" src={CIIRCC_logo}  ></img></motion.a>
+									
+									<div class="buttons_row" style={{justifyContent: "center", paddingTop:"10rem"}}>
+										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://filozofia.uj.edu.pl/"><img class="svg_collab" src={SRL_logo}  ></img></motion.a>
 
 										
 									</div>
@@ -309,25 +311,6 @@ function App() {
 						</RenderInBrowser>
 
 
-						<RenderInBrowser only mobile>
-							<div class="box-main collaborators">
-								<h1 class="text-big" >
-									Collaborators
-								</h1>
-								<div class="collab-buttons" >
-									<div class="buttons_row">
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://incognite-lab.github.io/"><img class='svg_collab' src={INCOG_logo}  ></img></motion.a>
-
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://www.acin.tuwien.ac.at/"><img class='svg_collab' src={ACIN_logo} ></img></motion.a>
-
-										<motion.a whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} href="https://filozofia.uj.edu.pl/"> <img class='svg_collab' src={SRL_logo} ></img></motion.a>
-									</div>
-									
-								</div>
-
-
-							</div>
-						</RenderInBrowser>
 					</section>
 
 				</div>

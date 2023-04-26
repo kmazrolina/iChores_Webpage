@@ -219,19 +219,10 @@ body {
 
 .architecture_svg {
 	position:absolute;
-	height: 280vh;
-	width: auto;
+	height: 300vh;
 	z-index: 0;
 }
 
-.collaborators {
-	align-items: center;
-	padding: 15vh 0vw;
-}
-
-.collab_section{
-	height: 200vh;
-}
 
 .lower {
 	width: 50%;
@@ -350,23 +341,33 @@ a:visited {
 
 }
 
+.collaborators {
+	align-items: center;
+	padding: 15vh 0vw;
+}
+
+.collab_section{
+	height: 220vh;
+}
+
+
 .collab-buttons {
 	display: grid;
 	justify-items: center;
 	width: 90vw;
-	row-gap: 10vh;
 	padding-top: 10vh;
-	grid-template-columns: 100%;
+	grid-template-columns:auto;
 
 }
 
 .buttons_row {
-	
+	width:80vw;
+	display:flex;
 
 }
 
 .svg_collab {
-	height: 5rem;
+	height: 50vh;
 }
 
 .error-page {
@@ -404,7 +405,7 @@ h1 {
 	display: grid;
 	align-items: center;
 	justify-items: left;
-	height: 40vh;
+	height: 10vh;
 	width: 100vw;
 
 
