@@ -120,7 +120,7 @@ body {
 	height: 0;
 	opacity: 0;
 	transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  }
+}
 
 .sidebar li {
 	list-style: none;
@@ -132,7 +132,7 @@ body {
 
 .sidebar_links {
 	text-align: center;
-	
+
 }
 
 
@@ -202,31 +202,18 @@ body {
 	padding: 15vh 15vw;
 }
 
-.arch_section{
-	height: 300vh;
-	align-items: center;
-	
+.arch_section {
+	height: 350vh;
 }
-.architecture {
-	z-index: 1;
 
-
-}
-.architecture_h0{
-
-}
-.architecture_h1 {
-	text-align: right;
-}
 .architecture_svg {
-	height:150vh;
+	height: 300vh;
 	z-index: 0;
+	width: 100%;
+
 
 }
-.architecture_diagram{
-	display: grid;
-	position: absolute;
-}
+
 
 .lower {
 	width: 50%;
@@ -350,37 +337,94 @@ a:visited {
 	padding: 15vh 0vw;
 }
 
-.collab_section{
-	height: 220vh;
+.collab_section {
+	height: 210vh;
 }
 
 
 .collab-buttons {
 	display: grid;
-
-	width: 90vw;
+	width: 70vw;
 	padding-top: 10vh;
-	
+	row-gap: 0;
+
 
 }
 
-.buttons_row{
+
+.buttons_row1 {
 	display: grid;
-	grid-template-columns: 30% ;
+	grid-template-columns: 30%;
 }
-.button1 {
-	background-image: url(Pictures/bubble1.svg);
+
+.button {
+
 	background-repeat: no-repeat;
-	background-size:100%;
-	height: 45vh;
-	width: 23vw;
+	background-size: 100%;
+	height: 50vh;
+	width: 25vw;
 	display: grid;
 	align-items: center;
 	justify-items: center;
-	padding-right: 3vw;
+	row-gap: 0;
 
 
 }
+
+.incog {
+	background-image: url(Pictures/bubble1.svg);
+	padding-right: 15%;
+
+}
+
+.buttons_row2 {
+	display: grid;
+	grid-template-columns: 60% 30%;
+}
+
+.acin {
+	background-image: url(Pictures/bubble_acin.svg);
+	padding-left: 13%;
+	width: 26vw;
+
+}
+
+.buttons_row3 {
+	display: grid;
+	grid-template-columns: 20% 30%;
+}
+
+.srl {
+	background-image: url(Pictures/bubble2.svg);
+	padding-left: 15%;
+
+
+}
+
+.button_contents {
+	display: grid;
+	justify-items: center;
+}
+
+.svg_collab {
+	padding-bottom: 1rem;
+	height: 5rem;
+}
+
+.collab {
+	font-size: 1rem;
+}
+
+.mail_icon {
+	height: 1rem;
+
+	padding-right: 0.5rem;
+	vertical-align: middle;
+}
+
+.a.hover {}
+
+
 
 .error-page {
 	display: flex;
@@ -456,13 +500,7 @@ h1 {
 }
 
 
-.contact_svg {
-	height: 1rem;
-	padding-top: 1vh;
-	padding-bottom: 1vh;
-	padding-right: 1vw;
-	vertical-align: middle;
-}
+
 
 .addresses {
 	display: grid;
@@ -501,14 +539,9 @@ h1 {
 
 @media(max-height: 600px) {
 
-	.collab-buttons {
-		padding-top: 0;
-	}
+	
 
-	.footer {
-		height: 50vh;
-
-	}
+	
 
 
 	.sidebar li {
@@ -537,9 +570,6 @@ h1 {
 
 
 
-	.footer {
-		height: 100vh;
-	}
 
 }
 
@@ -558,22 +588,6 @@ h1 {
 
 	.text-small {
 		font-size: calc(0.7rem + 1vh);
-	}
-
-	.architecture {
-		padding: 10vh 10vw;
-	}
-
-	.architecture_svg {
-		height: 60vh;
-	}
-
-	.footer-text-big {
-		font-size: 1.1rem
-	}
-
-	.footer-text-small {
-		font-size: 0.8rem;
 	}
 
 	.svg_menu {
@@ -601,12 +615,6 @@ h1 {
 
 		height: 7vh;
 		width: 7vw;
-	}
-
-
-
-	.svg_collab {
-		height: 2.5rem;
 	}
 
 }
@@ -638,22 +646,12 @@ h1 {
 		height: 10vh;
 	}
 
-	.architecture_svg {
-
-		height: 80vh;
-
-	}
-
-}
-
-@media(max-height:700px) and (max-width:700px) {
-	.footer {
-		height: 100vh;
-	}
-
 
 
 }
+
+
+
 
 /*==================max-width=====================*/
 @media(max-width: 1024px) {
@@ -665,14 +663,6 @@ h1 {
 		grid-template-columns: 60% auto;
 	}
 
-	.collab-buttons {
-		padding: 10vh 0vw;
-		width: 80vw;
-	}
-
-	.svg_collab {
-		height: 4rem;
-	}
 
 	.logo {
 		width: 50vw;
@@ -687,25 +677,12 @@ h1 {
 }
 
 @media(max-width: 900px) {
-	.architecture {
-		grid-template-columns: auto;
-	}
 
-	.architecture_h1 {
-		text-align: center;
-	}
-
-	.architecture_svg {
-		padding: 0;
-	}
 
 	.imagine {
 		padding: 15vh 15vh 5vw 16vw;
 	}
 
-	.svg_collab {
-		height: 4rem;
-	}
 
 }
 
@@ -718,21 +695,6 @@ h1 {
 		padding: 10vh 11vw;
 	}
 
-	.svg_collab {
-		height: 3.5rem;
-	}
-
-	.collab-buttons {
-		row-gap: 15vh;
-
-	}
-
-
-
-	.footer-text-big {
-		font-size: 1.3rem;
-
-	}
 
 
 }
@@ -751,28 +713,7 @@ h1 {
 		padding: 15vh 10vw;
 	}
 
-	.collab-buttons {
-		row-gap: 15vh;
-	}
 
-	.svg_collab {
-		height: 3rem;
-	}
-
-
-	.addresses {
-		grid-template-columns: 100%;
-		padding-bottom: 3rem;
-
-	}
-
-	.address {
-		padding-top: 2rem;
-	}
-
-	.footer {
-		height: 75vh
-	}
 
 
 }
@@ -790,15 +731,7 @@ h1 {
 		padding: 15vh 11vw;
 	}
 
-	.collab-buttons {
-		grid-template-columns: 50% 50%;
 
-	}
-
-	.buttons_row {
-		grid-template-columns: 100%;
-		row-gap: 5vh;
-	}
 
 	.user_case {
 
@@ -835,13 +768,6 @@ h1 {
 		font-size: calc(0.5rem + 1vh);
 	}
 
-	.footer-text-big {
-		font-size: 1rem
-	}
-
-	.footer-text-small {
-		font-size: 0.8rem;
-	}
 
 
 }
@@ -852,9 +778,7 @@ h1 {
 		height: 50vh;
 	}
 
-	.svg_collab {
-		padding: 4vh 10vw;
-	}
+
 
 }
 
@@ -868,32 +792,9 @@ h1 {
 		padding: 10vh 14vw;
 	}
 
-	.addresses {
-
-		grid-template-columns: 100%;
-		row-gap: 3vh;
-	}
-
-	.footer {
-		height: 102vh;
-	}
-
-	.svg_collab {
-
-		height: 2rem;
-	}
-
-
-
 
 }
 
-@media(max-width: 370px) {
-	.collab-buttons {
-		padding-top: 6vh;
-	}
-
-}
 
 
 
@@ -920,21 +821,39 @@ h1 {
 
 
 /*====== aspect-ratio ================*/
-
-@media(max-aspect-ratio: 36/74) and (max-width: 700px) {
-	.footer {
-		height: 100vh;
+@media(max-aspect-ratio: 19/10){
+	.svg_collab{
+		
+		height: 4rem;
 	}
-
+	.button_contents {
+		padding-bottom: 3rem;
+	}
 }
 
-@media(min-aspect-ratio: 65/45) and (max-width: 700px) {
-	.footer {
-		height: 150vh;
+@media(max-aspect-ratio: 17/10){
+	.button {
+
+		height: 60vh;
+		width: 35vw;
+
 	}
 
+	.collab_section {
+		height: 250vh;
+	}
+	.buttons_row3 
+	{
+		padding-top: 13rem;
+	}
+	
 }
 
+@media(max-aspect-ratio: 15/10){
+	.button_contents{
+		padding-bottom: 13vh;
+	}
+}
 
 @media (max-aspect-ratio: 5/7) {
 	.navbar {
@@ -944,6 +863,43 @@ h1 {
 	.nav-list {
 		padding-top: 0.3rem;
 	}
+}
+
+@media(max-aspect-ratio: 13/10){
+	.button {
+
+		height: 70vh;
+		width: 50vw;
+
+
+	}
+
+	.collab_section {
+		height: 300vh;
+
+	}
+	.buttons_row3 
+	{
+		grid-template-columns: auto;
+		padding-top: 0;
+
+	}
+	.buttons_row2
+	{
+		grid-template-columns: auto;
+		
+	}
+	.buttons_row1 
+	{
+		grid-template-columns: auto;
+		padding-left: 10%;
+		
+	}
+	.collab-buttons {
+		
+		row-gap: 20vh;
+	}
+	
 }
 
 

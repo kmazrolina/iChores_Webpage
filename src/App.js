@@ -12,19 +12,14 @@ import RenderInBrowser from 'react-render-in-browser';
 import { useScroll, useTransform } from "framer-motion";
 
 import user_case_svg from './Pictures/user_case.svg';
-import architecture_svg1 from './Pictures/architecture1.svg';
-import architecture_svg2 from './Pictures/architecture2.svg';
-/*import SRL_logo from './Pictures/bubble_uj.svg';
-import ACIN_logo from './Pictures/bubble_acin.svg';
-import INCOG_logo from './Pictures/bubble_incognite.svg';*/
+import architecture_svg from './Pictures/architecture.svg';
+import SRL_logo from './Pictures/SRL_logo.svg';
+import ACIN_logo from './Pictures/ACIN_logo.svg';
+import INCOG_logo from './Pictures/INCOG_logo.png';
 import mail_icon from './Pictures/mail_icon.svg';
 import menu from './Pictures/menu.svg';
 import close_icon from './Pictures/closeIcon.svg';
-import bubble1 from './Pictures/bubble1.svg';
-import bubble2 from './Pictures/bubble2.svg';
-import bubble_red from './Pictures/bubble_acin.svg';
 
-/*<motion.a whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} href="https://filozofia.uj.edu.pl/"><img class="svg_collab" src={bubble1}  ></img></motion.a>*/
 
 
 function App() {
@@ -232,38 +227,10 @@ function App() {
 
 					<section ref={architecture} class="section arch_section">
 						<RenderInBrowser except mobile>
-							<div class="architecture_diagram">
-								<motion.img class="architecture_svg" src={architecture_svg1} alt="k" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}></motion.img>
+							
+							
 
-								<motion.img class="architecture_svg" src={architecture_svg2} alt="k" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}></motion.img>
-
-							</div>
-
-
-							<div class="box-main architecture"></div>
-
-
-							<motion.div class="box-main architecture " initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-
-								<h1 class="text-big ">Reasoning and decision making</h1>
-								<h1 class="text-small architecture_h1" >
-									We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.
-								</h1>
-
-
-							</motion.div>
-
-
-
-							<motion.div class="box-main architecture" initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
-								<h1 class="text-big architecture_h0">Robot's actions</h1>
-								<h1 class="text-small architecture_h1" >
-									The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.
-								</h1>
-
-
-							</motion.div>
-
+						
 						</RenderInBrowser>
 
 						<RenderInBrowser only mobile></RenderInBrowser>
@@ -276,25 +243,38 @@ function App() {
 								Collaborators
 							</h1>
 							<div class="collab-buttons" >
-								<div class="buttons_row">
-									<div class="button1" >
-										<p>heheheh</p>
-
-									</div>
+								<div class="buttons_row1">
+									<motion.div class="button incog" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
+										<div class="button_contents">
+											<a href="https://incognite-lab.github.io/contact.html"><img class="svg_collab" src={INCOG_logo}></img></a>
+											<p class="text-small collab"><a href="https://www.cvut.cz/en">Czech Technical University in Prague</a></p>
+											<p class="text-small collab"><img class="mail_icon" src={mail_icon}></img>example@email.com</p>
+										</div>
+									</motion.div>
 								</div>
-								<div class="buttons_row">
-									<div class="button2" style={{ justifyContent: "right" }}>
+								<div class="buttons_row2">
+									<div></div>
+									<motion.div class="button acin" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} >
+										<div class="button_contents">
+											<a href="https://www.acin.tuwien.ac.at/en/"><img class="svg_collab" src={ACIN_logo}></img></a>
+											<p class="text-small collab"><a href="https://www.tuwien.at/">TU Wien</a></p>
+											<p class="text-small collab"><img class="mail_icon" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
+										</div>
 
 
-
-									</div>
+									</motion.div>
 								</div>
-								<div class="buttons_row">
-								<div class="button3" style={{ justifyContent: "center", paddingTop: "10rem" }}>
+								<div class="buttons_row3">
+									<div></div>
+									<motion.div class="button srl" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
 
+										<div class="button_contents">
+											<img class="svg_collab" src={SRL_logo}></img>
+											<p class="text-small collab"><a href="https://www.uj.edu.pl/">Jagiellonian University in Cracow</a></p>
+											<p class="text-small collab"><img class="mail_icon" src={mail_icon}></img>example@email.com</p>
+										</div>
 
-
-								</div>
+									</motion.div>
 								</div>
 
 							</div>
