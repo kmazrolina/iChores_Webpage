@@ -85,7 +85,7 @@ function App() {
 
 				</ul>
 				<div class={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
-					<ul class={`sidebar_links ${sidebarOpen ? 'open' : 'closed'}`}>
+					<ul class="sidebar_links">
 						<li class="sidebar_link" onClick={() => { scrollToSection(about, "auto"); closeSidebarDelayed() }}>About</li>
 						<li class="sidebar_link" onClick={() => { scrollToSection(user_case, "auto"); closeSidebarDelayed() }}> User&nbsp;Case</li>
 						<li class="sidebar_link" onClick={() => { scrollToSection(architecture, "auto"); closeSidebarDelayed() }}> Architecture </li>
