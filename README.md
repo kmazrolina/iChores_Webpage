@@ -1,6 +1,6 @@
 # iChores React App
 
-Welcome to the iChores React App repository! This repository contains the source code for the iChores project, a web application built using React.
+Welcome to the iChores React App repository. This repository contains the source code for the iChores website design built using React.
 
 ## Getting Started
 
@@ -46,7 +46,7 @@ npm run build
 This command generates an optimized bundle of the app in the build directory.
 
 ### Contributing
-We welcome contributions to the iChores React App. If you would like to contribute, please follow these steps:
+If you would like to contribute, please follow these steps:
 
 Fork the repository.
 Create a new branch for your feature or bug fix.
