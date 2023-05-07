@@ -63,7 +63,7 @@ img {
 	top: 0;
 	display: inline-block;
 	position: sticky;
-	
+
 	z-index: 3;
 	padding: calc(var(--nav_list_li_font_size)) 0;
 	width: 100vw;
@@ -98,8 +98,8 @@ img {
 .svg_menu {
 	cursor: pointer;
 
-	height: var(--nav_list_li_font_size);
-	padding-left: calc(2*var(--nav_list_li_font_size));
+	height: calc(2*var(--nav_list_li_font_size));
+	padding-left: calc(1.5*var(--nav_list_li_font_size));
 	visibility: hidden;
 }
 
@@ -136,7 +136,7 @@ img {
 	transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.sidebar.open *{
+.sidebar.open * {
 	visibility: visible;
 }
 
@@ -147,7 +147,7 @@ img {
 	transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.sidebar.closed *{
+.sidebar.closed * {
 	visibility: hidden;
 }
 
@@ -159,7 +159,7 @@ img {
 	font-weight: 300;
 	font-size: var(--nav_list_li_font_size);
 	cursor: pointer;
-	
+
 
 }
 
@@ -169,8 +169,8 @@ img {
 	width: min-content;
 	visibility: hidden;
 	margin-left: auto;
-	margin-right: auto ;
-	
+	margin-right: auto;
+
 }
 
 
@@ -243,7 +243,7 @@ img {
 
 
 .arch_section * {
-	
+
 	position: absolute;
 
 
@@ -397,10 +397,10 @@ img {
 }
 
 .arch_text {
-	
+
 	display: grid;
 	row-gap: 0;
-	height:1;
+	height: 1;
 	margin-top: auto;
 	margin-bottom: auto;
 
@@ -1104,6 +1104,11 @@ a:visited {
 		font-size: calc(0.5rem + 1vh);
 	}
 
+	.arch_section {
+		--arch-text-small-var: calc(0.5*2.5vh + 0.5*1.7vw);
+		--arch-text-big-var: calc(0.5*4vh + 0.5*3vw);
+		--arch-text-code-var: calc(0.5*2vh + 0.5*1.5vw);
+	}
 
 
 
@@ -1163,6 +1168,7 @@ a:visited {
 
 	.navbar_links {
 		visibility: hidden;
+		width:0
 	}
 
 }
@@ -1279,7 +1285,7 @@ a:visited {
 
 
 	.arch_section {
-		--long-line-top: calc(var(--arch-vert-padding) + 4*var(--svg-percept-height) + 5*var(--arch-percept-spacing) + var(--arch-text-small-var) + var(--arch-element-spacing));
+		--long-line-top: calc(var(--arch-vert-padding) + 4*var(--svg-percept-height) + 3*var(--arch-percept-spacing) + var(--arch-text-small-var) + var(--arch-element-spacing));
 	}
 
 	.robot {
@@ -1295,51 +1301,42 @@ a:visited {
 	.L_shape_replacement_line {
 		visibility: visible;
 	}
-
-}
-
-@media(max-aspect-ratio: 46/100) {
-	.arch_section {
-		--long-line-top: calc(var(--arch-vert-padding) + 4*var(--svg-percept-height) + 3*var(--arch-percept-spacing) + 2*var(--arch-text-small-var) + var(--arch-element-spacing));
-		--curved-line-height: 70vh;
-	}
-
-
 	.gestures {
 		right: var(--arch-horiz-padding);
 	}
-
-	.robot {
-		--robot-top: calc(var(--actions-top) + var(--arch-text-big-var) + var(--arch-text-small-var) + 5*var(--arch-element-spacing));  
+	.arch_section{
+		--robot-top:  calc(var(--actions-top) + 8*var(--arch-element-spacing));
 	}
 
 }
 
-
-@media(max-aspect-ratio: 36/100) {
-	.arch_percept {
-		width: min-content;
-	}
-
+@media(max-aspect-ratio: 5/100) {
 	.arch_section {
-		--short-line-top: calc(var(--arch-vert-padding) + 2*var(--svg-percept-height) + var(--arch-percept-spacing) + var(--arch-element-spacing) + var(--arch-text-code-var));
-		--short-line-height: calc(2*var(--arch-percept-spacing) + var(--svg-percept-height) - 2*var(--arch-element-spacing) - var(--arch-text-code-var));
+		--long-line-top: calc(var(--arch-vert-padding) + 4*var(--svg-percept-height) + 3*var(--arch-percept-spacing) + 2*var(--arch-text-small-var) + var(--arch-element-spacing));
+		
+
 	}
+
+
+	.speech {
+		left: var(--arch-horiz-padding)
+	}
+
+
 
 }
 
-@media(max-aspect-ratio:33/100) {
-
+@media(max-aspect-ratio: 45/100) {
 	.arch_percept {
 		grid-template-columns: auto;
 	}
 
 	.speech {
-		right: 60%;
+		right: 53%;
 	}
 
 	.objects {
-		right: 60%;
+		right: 50%;
 	}
 
 	.gaze {
@@ -1357,7 +1354,7 @@ a:visited {
 		--long-line-top: calc(var(--arch-vert-padding) + 4*var(--svg-percept-height) + 3*var(--arch-percept-spacing) + 2*var(--arch-element-spacing) + var(--svg-percept-height) + var(--arch-text-code-var));
 		--simple-line-top: calc(var(--long-line-top) + var(--long-line-height) + 9*var(--arch-element-spacing) + 2*var(--arch-text-big-var) + 4*var(--arch-text-small-var));
 
-		padding: var(--arch-vert-padding) var(--arch-horiz-padding) calc(2.5*var(--arch-vert-padding));
+		padding: var(--arch-vert-padding) var(--arch-horiz-padding) calc(4*var(--arch-vert-padding));
 
 	}
 
@@ -1370,9 +1367,8 @@ a:visited {
 		left: 30%;
 	}
 
-	.text-big-arch {
-		padding: var(--arch-element-spacing) 0;
-	}
+
+
 
 	.reasoning h1 {
 
@@ -1390,12 +1386,15 @@ a:visited {
 	}
 
 
-
-
-
 }
 
-@media(max-aspect-ratio:1/4) {
+
+@media(max-aspect-ratio: 36/100) {
+	.arch_percept {
+		width: min-content;
+	}
+
+
 	.actions h1 {
 
 		font-size: var(--arch-text-big-var);
@@ -1409,7 +1408,12 @@ a:visited {
 		white-space: normal
 	}
 
+	
+
 }
+
+
+
 
 @media(max-aspect-ratio:1/5) {
 	.replacement_dash_line {
