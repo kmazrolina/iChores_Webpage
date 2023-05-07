@@ -58,9 +58,13 @@ function App() {
 	}
 
 
+
 	const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
+	function openSidebar() {
+		setSidebarOpen(!sidebarOpen);
 
+	}
 	const { scrollYProgress } = useScroll();
 
 	// interpolate the scrollYProgress value from 0-1 to the new viewBox values
@@ -79,9 +83,10 @@ function App() {
 
 		<div class="main_div" style={{ overflow: "unset" }} >
 
-			<motion.nav class="navbar background" whileHover={{ backgroundColor: "rgba(245,245,245,1)" }}>
-				<img class="svg_menu" src={sidebarOpen ? close_icon : menu} onClick={() => { setSidebarOpen(!sidebarOpen) }} ></img>
+			<motion.nav class="navbar background" whileHover={{ backgroundColor: "rgba(245,245,245,1)" }} >
+				<img class="svg_menu" src={sidebarOpen ? close_icon : menu} onClick={() => { setSidebarOpen(!sidebarOpen) }} style={{pointerEvents: "all"}}  ></img>
 				<ul class="nav-list">
+
 					<li class="navbar_links" onClick={() => scrollToSection(about, "smooth")}>About</li>
 					<li class="navbar_links" onClick={() => scrollToSection(user_case, "smooth")}> User&nbsp;Case</li>
 					<li class="navbar_links" onClick={() => scrollToSection(architecture, "smooth")}> Architecture </li>
@@ -233,108 +238,117 @@ function App() {
 
 
 					<section ref={architecture} class="arch_section">
+
 						<RenderInBrowser except mobile>
-							<div class="arch_contents">
-								<img class="dotted_L_shape_line" src={dotted_L_shape_line}></img>
-								<img class="dash_curved_line" src={dash_curved_line}></img>
-								<div class="short_line" ></div>
-								<div class="long_line" ></div>
-								<img class="replacement_dash_line" src={narrow_width_dash_line}></img>
-								<motion.img class="robot" src={robot}></motion.img>
-								<div class="simple_line" ></div>
-								<div class="dash_line" ></div>
-								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept gaze">
-									<img class="svg_percept" src={eye}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Gaze</p>
-										<p class="text-code">&lt; &nbsp;type, duration, direction&nbsp;&gt;</p>
-									</div>
-								</motion.div>
-								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept gestures">
-									<img class="svg_percept" src={hand}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Gestures</p>
-										<p class="text-code">&lt; &nbsp;type, direction&nbsp;&gt;</p>
-									</div>
-								</motion.div>
-								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept speech">
-									<img class="svg_percept" src={talk}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Speech</p>
-										<p class="text-code">&lt; &nbsp;words, phrases&nbsp;&gt;</p>
-									</div>
-								</motion.div>
-								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept objects">
-									<img class="svg_percept" src={book}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Objects</p>
-										<p class="text-code">&lt; &nbsp;location, spatial relationships&nbsp;&gt;</p>
-									</div>
-								</motion.div>
+
+							<img class="dotted_L_shape_line" src={dotted_L_shape_line}></img>
+							<div class="L_shape_replacement_line"></div>
+							<img class="dash_curved_line" src={dash_curved_line}></img>
+							<div class="short_line" ></div>
+							<div class="long_line" ></div>
+							<img class="replacement_dash_line" src={narrow_width_dash_line}></img>
+							<div class="second_replacemnt_dash_line"></div>
+							<motion.img class="robot" src={robot}></motion.img>
+							<div class="simple_line" ></div>
+							<div class="dash_line" ></div>
+							<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept gaze">
+								<img class="svg_percept" src={eye}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Gaze</p>
+									<p class="text-code">&lt; &nbsp;type, duration, direction&nbsp;&gt;</p>
+								</div>
+							</motion.div>
+							<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept gestures">
+								<img class="svg_percept" src={hand}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Gestures</p>
+									<p class="text-code">&lt; &nbsp;type, direction&nbsp;&gt;</p>
+								</div>
+							</motion.div>
+							<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept speech">
+								<img class="svg_percept" src={talk}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Speech</p>
+									<p class="text-code">&lt; &nbsp;words, phrases&nbsp;&gt;</p>
+								</div>
+							</motion.div>
+							<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept objects">
+								<img class="svg_percept" src={book}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Objects</p>
+
+									<p class="text-code">&lt; &nbsp;location, spatial relationships&nbsp;&gt;</p>
+								</div>
+							</motion.div>
 
 
-								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_text reasoning">
-									<h1 class="text-big">Reasoning and decision&#8209;making</h1>
-									<p class="text-small">We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.</p>
-								</motion.div>
-								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_text actions">
-									<h1 class="text-big">Robot's actions</h1>
-									<p class="text-small">The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.</p>
+							<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_text reasoning">
+								<h1 class="text-big-arch">Reasoning and decision&#8209;making</h1>
+								<p class="text-small-arch">We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.</p>
+							</motion.div>
+							<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_text actions">
+								<h1 class="text-big-arch">Robot's actions</h1>
+								<p class="text-small-arch">The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.</p>
 
-								</motion.div>
-							</div>
+							</motion.div>
+
 						</RenderInBrowser>
 
 						<RenderInBrowser only mobile>
-							<div class="arch_contents">
-								<img class="dotted_L_shape_line" src={dotted_L_shape_line}></img>
-								<svg class="dash_curved_line" id="dash_line_svg" src={dash_curved_line}  viewBox="0 100 30 431"></svg>
-								<div class="short_line" ></div>
-								<div class="long_line" ></div>
-								<img class="robot" src={robot}></img>
-								<div class="simple_line" ></div>
-								<div class="dash_line" ></div>
-								<div class="arch_percept gaze">
-									<img class="svg_percept" src={eye}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Gaze</p>
-										<p class="text-code">&lt; &nbsp;type, duration, direction&nbsp;&gt;</p>
-									</div>
-								</div>
-								<div class="arch_percept gestures">
-									<img class="svg_percept" src={hand}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Gestures</p>
-										<p class="text-code">&lt; &nbsp;type, direction&nbsp;&gt;</p>
-									</div>
-								</div>
-								<div class="arch_percept speech">
-									<img class="svg_percept" src={talk}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Speech</p>
-										<p class="text-code">&lt; &nbsp;words, phrases&nbsp;&gt;</p>
-									</div>
-								</div>
-								<div class="arch_percept objects">
-									<img class="svg_percept" src={book}></img>
-									<div class="arch_percept_text">
-										<p class="text-small-arch">Objects</p>
-										<p class="text-code">&lt; &nbsp;location, spatial relationships&nbsp;&gt;</p>
-									</div>
-								</div>
 
-
-								<div class="arch_text reasoning">
-									<h1 class="text-big">Reasoning and decision-making</h1>
-									<p class="text-small-arch">We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.</p>
-								</div>
-								<div class="arch_text actions">
-									<h1 class="text-big">Robot's actions</h1>
-									<p class="text-small-arch">The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.</p>
-
+							<img class="dotted_L_shape_line" src={dotted_L_shape_line}></img>
+							<div class="L_shape_replacement_line"></div>
+							<img class="dash_curved_line" src={dash_curved_line}></img>
+							<div class="short_line" ></div>
+							<div class="long_line" ></div>
+							<img class="replacement_dash_line" src={narrow_width_dash_line}></img>
+							<div class="second_replacemnt_dash_line"></div>
+							<img class="robot" src={robot}></img>
+							<div class="simple_line" ></div>
+							<div class="dash_line" ></div>
+							<div class="arch_percept gaze">
+								<img class="svg_percept" src={eye}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Gaze</p>
+									<p class="text-code">&lt; &nbsp;type, duration, direction&nbsp;&gt;</p>
 								</div>
 							</div>
+							<div class="arch_percept gestures">
+								<img class="svg_percept" src={hand}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Gestures</p>
+									<p class="text-code">&lt; &nbsp;type, direction&nbsp;&gt;</p>
+								</div>
+							</div>
+							<div class="arch_percept speech">
+								<img class="svg_percept" src={talk}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Speech</p>
+									<p class="text-code">&lt; &nbsp;words, phrases&nbsp;&gt;</p>
+								</div>
+							</div>
+							<div class="arch_percept objects">
+								<img class="svg_percept" src={book}></img>
+								<div class="arch_percept_text">
+									<p class="text-small-arch">Objects</p>
+
+									<p class="text-code">&lt; &nbsp;location, spatial relationships&nbsp;&gt;</p>
+								</div>
+							</div>
+
+
+							<div class="arch_text reasoning">
+								<h1 class="text-big-arch">Reasoning and decision&#8209;making</h1>
+								<p class="text-small-arch">We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.</p>
+							</div>
+							<div class="arch_text actions">
+								<h1 class="text-big-arch">Robot's actions</h1>
+								<p class="text-small-arch">The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.</p>
+
+							</div>
+
 						</RenderInBrowser>
+
 					</section>
 
 
@@ -348,8 +362,8 @@ function App() {
 								<motion.div class="row_contents incog_row" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
 									<img class="bubble" src={incog_bubble}></img>
 									<div class="button_contents incog">
-										<a href="https://incognite-lab.github.io/contact.html"><img class="svg_collab" src={INCOG_logo}></img></a>
-										<p class="text-small_collab"><a href="https://www.cvut.cz/en">Czech Technical University in&nbsp;Prague</a></p>
+										<motion.a whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} href="https://incognite-lab.github.io/contact.html"><img class="svg_collab" src={INCOG_logo}></img></motion.a>
+										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.cvut.cz/en">Czech Technical University in&nbsp;Prague</a></motion.p>
 										<p class="text-small_collab email"><img class="mail_icon" src={mail_icon}></img>example@email.com</p>
 									</div>
 								</motion.div>
@@ -359,8 +373,8 @@ function App() {
 								<motion.div class="row_contents acin_row" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} >
 									<img class="bubble" src={acin_bubble}></img>
 									<div class="button_contents acin">
-										<a href="https://www.acin.tuwien.ac.at/en/"><img class="svg_collab" src={ACIN_logo}></img></a>
-										<p class="text-small_collab"><a href="https://www.tuwien.at/">TU&nbsp;Wien</a></p>
+										<motion.a whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} href="https://www.acin.tuwien.ac.at/en/"><img class="svg_collab" src={ACIN_logo}></img></motion.a>
+										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.tuwien.at/">TU&nbsp;Wien</a></motion.p>
 										<p class="text-small_collab email"><img class="mail_icon" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
 									</div>
 
@@ -372,8 +386,8 @@ function App() {
 								<motion.div class="row_contents srl_row" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
 									<img class="bubble" src={srl_bubble}></img>
 									<div class="button_contents srl">
-										<img class="svg_collab" src={SRL_logo}></img>
-										<p class="text-small_collab"><a href="https://www.uj.edu.pl/">Jagiellonian University in&nbsp;Cracow</a></p>
+										<motion.a whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} href="https://filozofia.uj.edu.pl/"><img class="svg_collab" src={SRL_logo}></img></motion.a>
+										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.uj.edu.pl/">Jagiellonian University in&nbsp;Cracow</a></motion.p>
 										<p class="text-small_collab email"><img class="mail_icon" src={mail_icon}></img>example@email.com</p>
 									</div>
 
