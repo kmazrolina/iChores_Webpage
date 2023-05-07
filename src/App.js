@@ -11,9 +11,13 @@ import { useRef } from "react";
 import RenderInBrowser from 'react-render-in-browser';
 import { useScroll, useTransform } from "framer-motion";
 
+
+
+
 import user_case_svg from './Pictures/user_case.svg';
 import dotted_L_shape_line from './Pictures/dotted_L_shape_line.svg'
 import dash_curved_line from './Pictures/dash_curved_line.svg'
+import narrow_width_dash_line from './Pictures/narrow_width_dash_line.svg'
 import robot from './Pictures/robot.svg'
 import eye from './Pictures/eye.svg'
 import talk from './Pictures/talk.svg'
@@ -235,6 +239,7 @@ function App() {
 								<img class="dash_curved_line" src={dash_curved_line}></img>
 								<div class="short_line" ></div>
 								<div class="long_line" ></div>
+								<img class="replacement_dash_line" src={narrow_width_dash_line}></img>
 								<motion.img class="robot" src={robot}></motion.img>
 								<div class="simple_line" ></div>
 								<div class="dash_line" ></div>
@@ -242,39 +247,39 @@ function App() {
 									<img class="svg_percept" src={eye}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Gaze</p>
-										<p class="text-code">&lt; type, duration, direction &gt;</p>
+										<p class="text-code">&lt; &nbsp;type, duration, direction&nbsp;&gt;</p>
 									</div>
 								</motion.div>
 								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept gestures">
 									<img class="svg_percept" src={hand}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Gestures</p>
-										<p class="text-code">&lt; type, direction &gt;</p>
+										<p class="text-code">&lt; &nbsp;type, direction&nbsp;&gt;</p>
 									</div>
 								</motion.div>
 								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept speech">
 									<img class="svg_percept" src={talk}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Speech</p>
-										<p class="text-code">&lt; words, phrases &gt;</p>
+										<p class="text-code">&lt; &nbsp;words, phrases&nbsp;&gt;</p>
 									</div>
 								</motion.div>
 								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_percept objects">
 									<img class="svg_percept" src={book}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Objects</p>
-										<p class="text-code">&lt; location, spatial relationships &gt;</p>
+										<p class="text-code">&lt; &nbsp;location, spatial relationships&nbsp;&gt;</p>
 									</div>
 								</motion.div>
 
 
 								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_text reasoning">
-									<h1 class="text-big">Reasoning and decision-making</h1>
-									<p class="text-small-arch">We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.</p>
+									<h1 class="text-big">Reasoning and decision&#8209;making</h1>
+									<p class="text-small">We take the&nbsp;approach of&nbsp;behavior&#8209;based robotics <a href="https://books.google.co.jp/books?hl=pl&lr=&id=mRWT6alZt9oC&oi=fnd&pg=PR11&dq=arkin+1998&ots=460pcjN8kz&sig=c4lXftVU1wljK4DrpqT_bSOYSUc&redir_esc=y#v=onepage&q=arkin%201998&f=false">(Arkin&nbsp;1998)</a> to&nbsp;organize sensory information as&nbsp;percepts.</p>
 								</motion.div>
 								<motion.div initial={{ opacity: 0, scale: 0.99 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} class="arch_text actions">
 									<h1 class="text-big">Robot's actions</h1>
-									<p class="text-small-arch">The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.</p>
+									<p class="text-small">The percepts are used to&nbsp;determine the&nbsp;robot’s&nbsp;behavior.</p>
 
 								</motion.div>
 							</div>
@@ -283,7 +288,7 @@ function App() {
 						<RenderInBrowser only mobile>
 							<div class="arch_contents">
 								<img class="dotted_L_shape_line" src={dotted_L_shape_line}></img>
-								<img class="dash_curved_line" src={dash_curved_line}></img>
+								<svg class="dash_curved_line" id="dash_line_svg" src={dash_curved_line}  viewBox="0 100 30 431"></svg>
 								<div class="short_line" ></div>
 								<div class="long_line" ></div>
 								<img class="robot" src={robot}></img>
@@ -293,28 +298,28 @@ function App() {
 									<img class="svg_percept" src={eye}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Gaze</p>
-										<p class="text-code">&lt; type, duration, direction &gt;</p>
+										<p class="text-code">&lt; &nbsp;type, duration, direction&nbsp;&gt;</p>
 									</div>
 								</div>
 								<div class="arch_percept gestures">
 									<img class="svg_percept" src={hand}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Gestures</p>
-										<p class="text-code">&lt; type, direction &gt;</p>
+										<p class="text-code">&lt; &nbsp;type, direction&nbsp;&gt;</p>
 									</div>
 								</div>
 								<div class="arch_percept speech">
 									<img class="svg_percept" src={talk}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Speech</p>
-										<p class="text-code">&lt; words, phrases &gt;</p>
+										<p class="text-code">&lt; &nbsp;words, phrases&nbsp;&gt;</p>
 									</div>
 								</div>
 								<div class="arch_percept objects">
 									<img class="svg_percept" src={book}></img>
 									<div class="arch_percept_text">
 										<p class="text-small-arch">Objects</p>
-										<p class="text-code">&lt; location, spatial relationships &gt;</p>
+										<p class="text-code">&lt; &nbsp;location, spatial relationships&nbsp;&gt;</p>
 									</div>
 								</div>
 
