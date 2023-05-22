@@ -364,6 +364,7 @@ function App() {
 									<div class="button_contents incog">
 										<motion.a whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} href="https://incognite-lab.github.io/contact.html"><img class="svg_collab" src={INCOG_logo}></img></motion.a>
 										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.cvut.cz/en">Czech Technical University in&nbsp;Prague</a></motion.p>
+										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.cvut.cz/en">Czech Institute of&nbsp;Informatics Robotics and&nbsp;Cybernetics</a></motion.p>
 										<p class="text-small_collab email"><img class="mail_icon" src={mail_icon}></img>example@email.com</p>
 									</div>
 								</motion.div>
