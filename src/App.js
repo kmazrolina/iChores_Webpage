@@ -376,6 +376,7 @@ function App() {
 									<div class="button_contents acin">
 										<motion.a whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} href="https://www.acin.tuwien.ac.at/en/"><img class="svg_collab" src={ACIN_logo}></img></motion.a>
 										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.tuwien.at/">TU&nbsp;Wien</a></motion.p>
+										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.acin.tuwien.ac.at/en/">Automation and&nbsp;Control Institute</a></motion.p>
 										<p class="text-small_collab email"><img class="mail_icon" src={mail_icon}></img>office@acin.tuwien.ac.at</p>
 									</div>
 
@@ -387,8 +388,9 @@ function App() {
 								<motion.div class="row_contents srl_row" whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
 									<img class="bubble" src={srl_bubble}></img>
 									<div class="button_contents srl">
-										<motion.a whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} href="https://filozofia.uj.edu.pl/"><img class="svg_collab" src={SRL_logo}></img></motion.a>
+										<a whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} ><img class="svg_collab" src={SRL_logo}></img></a>
 										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://www.uj.edu.pl/">Jagiellonian University in&nbsp;Cracow</a></motion.p>
+										<motion.p whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }} class="text-small_collab"><a href="https://filozofia.uj.edu.pl/">Institute of&nbsp;Philisophy</a></motion.p>
 										<p class="text-small_collab email"><img class="mail_icon" src={mail_icon}></img>example@email.com</p>
 									</div>
 
